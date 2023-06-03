@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vorlesung 3 &ndash; Portfolio &ndash; Niclas Kusenbach</title>
+		<link rel="stylesheet" href="../index.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+		/>
+		<link
+			rel="shortcut icon"
+			href="../pictures/logo_small_icon_only_inverted.png"
+			type="image/x-icon"
+		/>
+		<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+	</head>
+	<body>
+		<header class="navbar">
+			<div>
+				<ul>
+					<div class="dropdown">
+						<a href="../../index.html#webprogrammierung" class="item active"
+							>Webprogrammierung</a
+						>
+						<div>
+							<ul class="dropcontent">
+								<li><a href="WebDevVorlesung1.html">Vorlesung 1</a></li>
+								<li><a href="WebDevVorlesung2.html">Vorlesung 2</a></li>
+								<li><a href="WebDevVorlesung3.html">Vorlesung 3</a></li>
+								<li><a href="WebDevVorlesung4.html">Vorlesung 4</a></li>
+								<li><a href="WebDevVorlesung5.html">Vorlesung 5</a></li>
+								<li><a href="WebDevVorlesung6.html">Vorlesung 6</a></li>
+								<li><a href="WebDevVorlesung7.html">Vorlesung 7</a></li>
+								<li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+							</ul>
+						</div>
+					</div>
+					<a class="name" href="../../index.html">Niclas Kusenbach</a>
+					<a href="../../index.html#verteilteSysteme" class="item"
+						>Verteilte Systeme</a
+					>
+				</ul>
+			</div>
+		</header>
+		<main class="global section-gap">
+			<div class="section-gap">
+				<div class="heading section-gap">
+					<h1>Vorlesung 3 &ndash; Sitzung vom 27.10.2022</h1>
+				</div>
+				<p>
+					Zu Beginn der dritten Vorlesung haben wir wieder einen Exkurs zu HTML
+					gemacht. Dabei haben wir uns auf das „HT“ (Hypertext) in HTML
+					fokussiert. Hypertext steht für ein über Links verbundenes Netz aus
+					Text-, Bild- und Dateneinheiten in dem sich Nutzer je nach Interesse
+					frei bewegen können.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Hypertext</h2>
+				<p>
+					Um das zu erstellen haben wir den <code>&lt;a&gt;</code>-Tag
+					kennengelernt, mit dem auf andere Seiten oder Dateneinheiten verlinkt
+					werden kann. Das wichtigste Attribut des
+					<code>&lt;a&gt;</code>-Elements ist das <code>href=““</code> Attribut,
+					das das Ziel der Verbindung angibt.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;a href="home.html"&gt;Home&lt;/a&gt;
+				</pre
+				>
+				<p>
+					Eine verlinkte Seite wird normalerweise im aktiven Browserfenster
+					angezeigt, solange nichts anderes angegeben ist. Standardmäßig werden
+					Links wie folgt angezeigt:
+				</p>
+				<ul>
+					<li>
+						Ein nicht besuchter Link ist
+						<span
+							title="Dies ist kein Link sondern dient nur zur Demonstration."
+							style="text-decoration: underline; color: #0000ee"
+							>unterstrichen und blau</span
+						>
+					</li>
+					<li>
+						Ein besuchter link ist
+						<span
+							title="Dies ist kein Link sondern dient nur zur Demonstration."
+							style="text-decoration: underline; color: #551a8b"
+							>unterstrichen und lila</span
+						>
+					</li>
+					<li>
+						Ein aktiver link ist
+						<span
+							title="Dies ist kein Link sondern dient nur zur Demonstration."
+							style="text-decoration: underline; color: #ee0000"
+							>unterstrichen und rot</span
+						>
+					</li>
+				</ul>
+				<p>
+					Es kann nicht nur auf externe HTML Dateien verlinkt werden, sondern
+					auch auf Dateien in der eigenen Websitestruktur. Wenn diese im
+					gleichen Ordner liegt, ist dazu als Link der volle Name der Datei
+					nötig, z.B. <code>home.html</code>.<br />
+					Bei vielen Unterseiten verliert man allerdings so schnell den
+					Überblick, dass es sich eher eignet eine Ordnerstruktur anzulegen. Das
+					haben wir am Beispiel der Website <q>KopfüBar</q> ausprobiert.
+					Dazuhaben wir die einzelnen Unterseiten in entsprechend benannte
+					Ordner gepackt.
+				</p>
+				<img
+					src="../pictures/ordnerstruktur-1.jpg"
+					alt="Ordnerstruktur KopfüBar"
+					width="70%"
+				/>
+				<p>
+					Um jetzt von bar.html auf getraenke.html zu verlinken, muss ein
+					absoluter Dateipfad angegeben werden
+					<code
+						>&lt;a href="getraenke/getraenke.html"&gt;Getränke&lt;/a&gt;</code
+					>. Will man nun von der Getränke-Seite wieder zurück auf die
+					Startseite, muss auf den Ordner darüber verwiesen werden. Dazu werden
+					zwei Punkte vorangestellt:
+					<code>&lt;a href="../bar.html"&gt;Startseite&lt;/a&gt;</code>.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Variablen in JavaScript</h2>
+				<p>
+					Variablen sind Container, um Daten zu Speichern. Der Behälter ist ein
+					logischer Speicherplatz mit einem unveränderlichem Namen und einem
+					Wert, der je nach Deklaration verändert werden kann. Es gibt mehrere
+					Wege Variablen in JavaScript zu deklarieren: <code>var</code>,
+					<code>let</code> oder <code>const</code>. Das Schlüsselwort
+					<code>var</code> wurde in JavaScript von 1995 bis 2015 benutzt.
+					<code>let</code> und <code>const</code> wurden in 2015 hinzugefügt.
+					Wenn der code auch in alten Browsern funktionieren soll, sollte man
+					<code>var</code> benutzen.
+				</p>
+				<table class="styled-table">
+					<thead>
+						<tr>
+							<td width="150px"><strong>Schlüsselwort</strong></td>
+							<td width="450px"><strong>Funktion</strong></td>
+						</tr>
+					</thead>
+					<tr>
+						<td><code>let</code></td>
+						<td>
+							Legt eine Variable im aktuellen Gültigkeitsbereich an, die nicht
+							gleich deklariert werden muss. Für diesen Fall erhält sie den Wert
+							undefined
+						</td>
+					</tr>
+					<tr>
+						<td><code>var</code></td>
+						<td>
+							Deklariert eine Variable unabhängig von ihrem Scope
+							(Gültigkeitsbereich)
+						</td>
+					</tr>
+					<tr>
+						<td><code>const</code></td>
+						<td>
+							Legt eine Konstante an, die anfangs an einen Wert gebunden wird,
+							welcher später nicht verändert werden kann (immutable)
+						</td>
+					</tr>
+				</table>
+				<p>
+					Da JavaScript keine starke Typisierung aufweist, können in einer
+					Variablen alle Arten von Werten gespeichert werden. Der Typ einer
+					Variablen richtet sich daher implizit nach dem Typ des darin
+					gespeicherten Wertes. Notwendige Typänderungen werden eigenständig im
+					Hintergrund vorgenommen.<br />
+					Man kann mithilfe von <code>typeof</code> bspw. in der Konsole den
+					Datentyp einer Variablen ausgeben lassen:
+				</p>
+				<pre class="prettyprint" lang-scm“>
+
+   const aNumber = 6;
+   const aString = "Hallo";
+   console.log(typeof aNumber);
+   console.log(typeof aFloat);
+				</pre
+				>
+				<p>
+					Strings können auch verkettet werden:
+					<code>let aString = „Hal“ + „lo“</code><br />
+					Neben normalen Variablen gibt es auch noch Arrays. Das sind spezielle
+					Variablen, die mehr als einen Wert beinhalten können. Der einfachste
+					Weg ein Array zu deklarieren ist literal Schreibweise:
+				</p>
+				<pre class="prettyprint" lang-scm“>
+
+   const array_name = [item1, item2, …];
+	</pre
+				>
+				<p>Man kann die Werte eines Arrays mit einer Indexnummer aufrufen:</p>
+				<pre class="prettyprint" lang-scm“>
+				
+   const cars = ["Saab", "Volvo", "BMW"];
+   let car = cars[0];
+	</pre
+				>
+				<p>
+					Nach Erstellung können verschiedene Methoden mit dem Array benutzt
+					werden, wie z.B. .push() und .pop() um Elemente am Ende hinzuzufügen
+					oder wegzunehmen.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Kontrollstrukturen</h2>
+				<p>
+					Mit Kontrollstrukturen werden Programmabläufe gesteuert. Es sind vor
+					allem Verzweigungen und Schleifen, mit denen im Programm auf bestimmte
+					Bedingungen reagiert wird oder Programmschritte wiederholt werden. Man
+					unterscheidet zwischen Verzweigungen und Schleifen. Mittels
+					Verzweigungen ist es möglich, die Ausführungen einer oder mehrere
+					Anweisungsblöcke von Bedingungen abhängig zu machen. Schleifen
+					ermöglichen, einen Anweisungsblock wiederholt ausführen zu lassen.
+				</p>
+				<h3>Verzwigungen</h3>
+				<p>
+					In einer Verzweigung (bedingte Anweisung) wird ein Anweisungsblock nur
+					durchlaufen, wenn eine Bedingung erfüllt ist. Alternativ kann beim
+					Nichterfüllen der Bedingung ein zweiter Anweisungsblock durchlaufen
+					werden. Innerhalb der <code>else</code>-Bedingung kann ein weiterer
+					<code>if</code>-Block aufgerufen werden.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   if (Bedingung) {
+      //Anweisungsblock des True-Zweigs (wird ausgeführt, wenn Bedingung erfüllt ist)
+      Anweisung;
+      Anweisung;
+   } else if (Bedingung) {
+      //Anweisungsblock des False-Zweigs (wird ausgeführt, wenn Bedingung nicht erfüllt ist)
+      Anweisung;
+      Anweisung;
+   }
+	</pre
+				>
+				<h3>Schleifen</h3>
+				<p>
+					Schleifen dienen dazu, bestimmte Anweisungen zu wiederholen ohne, dass
+					diese dazu so oft notiert werden müssen. Dazu gibt es mehrere Arten
+					von Schleifen sowie einige Zusätze, die innerhalb dieser Schleifen
+					verwendet werden können. Die meistgebrauchten Schleifen sind z.B. die
+					<code>while</code>-Schleife oder die <code>for</code>-Schleife.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Übung Sterndreieck</h2>
+				<p>
+					Als Abschluss der Vorlesung sollten wir in JavaScript ein Programm
+					erstellen, dass eine Usereingabe entgegennimmt und anschließend ein
+					Dreieck aus <code>*</code> ausgibt, mit der angegebenen
+					Zeilenanzahl.<br />Das Programm kann
+					<a href="../../Vorlesung 3/Übung/index.html" target="_blank">hier</a>
+					ausprobiert werden.
+				</p>
+			</div>
+		</main>
+		<footer class="section-gap">
+			<div class="footer">
+				<a href="WebDevVorlesung4.html">Nächste Vorlesung</a>
+			</div>
+			<div>
+				<p class="cright">
+					&copy; 2022 Niclas Kusenbach &ndash; Alle Rechte Vorbehalten.
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

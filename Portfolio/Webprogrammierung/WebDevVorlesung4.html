@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vorlesung 4 &ndash; Portfolio &ndash; Niclas Kusenbach</title>
+		<link rel="stylesheet" href="../index.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+		/>
+		<link
+			rel="shortcut icon"
+			href="../pictures/logo_small_icon_only_inverted.png"
+			type="image/x-icon"
+		/>
+		<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+	</head>
+	<body>
+		<header class="navbar">
+			<div>
+				<ul>
+					<div class="dropdown">
+						<a href="../../index.html#webprogrammierung" class="item active"
+							>Webprogrammierung</a
+						>
+						<div>
+							<ul class="dropcontent">
+								<li><a href="WebDevVorlesung1.html">Vorlesung 1</a></li>
+								<li><a href="WebDevVorlesung2.html">Vorlesung 2</a></li>
+								<li><a href="WebDevVorlesung3.html">Vorlesung 3</a></li>
+								<li><a href="WebDevVorlesung4.html">Vorlesung 4</a></li>
+								<li><a href="WebDevVorlesung5.html">Vorlesung 5</a></li>
+								<li><a href="WebDevVorlesung6.html">Vorlesung 6</a></li>
+								<li><a href="WebDevVorlesung7.html">Vorlesung 7</a></li>
+								<li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+							</ul>
+						</div>
+					</div>
+					<a class="name" href="../../index.html">Niclas Kusenbach</a>
+					<a href="../../index.html#verteilteSysteme" class="item"
+						>Verteilte Systeme</a
+					>
+				</ul>
+			</div>
+		</header>
+		<main class="global section-gap">
+			<div class="section-gap">
+				<div class="heading section-gap">
+					<h1>Vorlesung 4 &ndash; Sitzung vom 14.11.2022</h1>
+				</div>
+				<p>
+					Zur Erstellung einer Website lohnt es sich vorher seine Ideen zu
+					visualisieren. Also die angestrebte Struktur vorher grob zu
+					skizzieren. Ob Digital beispielsweise als Figma oder Analog auf einem
+					Blatt Papier.
+				</p>
+				<img src="../pictures/Struktur.png" alt="Struktur einer HTML-Seite" />
+				<p>
+					Die Gebrainstormte Struktur wird nun mit den passenden HTML-Tags
+					versehen. Für Überschriften <code>&lt;h1&gt; &amp; &lt;h2&gt;</code>,
+					für Textabschnitte <code>&lt;p&gt;</code> und für Bilder
+					<code>&lt;img&gt;</code>. Drumherum muss natürlich noch die immer
+					benötigte Struktur in Form von
+					<code>&lt;body&gt;,&lt;head&gt; und &lt;title&gt;</code> sein.<br />
+					Zusätzlich zu den obenstehenden Standardelementen gibt es auch noch
+					seltener benutzte Tags wie bspw. <code>&lt;q&gt;</code>. Dies steht
+					für Quote und der Tag wird für kurze Zitate benutzt. Bei längeren
+					Zitaten wird <code>&lt;blockquote&gt;</code> benutzt.<br />
+					Als Beispiel:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;p&gt;Das ist ein &lt;q&gt;Zitat&lt;/q&gt;&lt;/p&gt;
+            </pre
+				>
+				<p>
+					Ergibt:<br />
+					Das ist ein <q>Zitat</q>.
+				</p>
+				<p>Im Gegensatz dazu:</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;blockquote&gt;
+      Lorem ipsum dolor sit amet, consetetur
+      sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+      labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+      eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+      gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+      amet.
+   &lt;/blockquote&gt;
+            </pre
+				>
+				<p>Ergibt:<br /></p>
+
+				<blockquote>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+					nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+					sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+					rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+					ipsum dolor sit amet.
+				</blockquote>
+
+				<p>
+					Wichtig hierbei hervorzuheben ist, dass die Darstellung beider Tags in
+					verschiedenen Browsern unterschiedlich sein kann.<br />
+					Wenn man einen Zeilenumbruch erzwingen will und nicht dem Browser
+					überlassen will, benötigt man den <code>&lt;br&gt;</code>-Tag. Das ist
+					ein Inhaltsloses Element, ohne Inhalt. Dieses benötigt kein
+					Schließtag, sondern steht immer allein da. Es wird an der Stelle, wo
+					der gewünschte Zeilenumbruch sein soll, eingefügt. Dies kann innerhalb
+					eines Textabsatzes oder zwischen zwei Textabsätzen sein.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Listen</h2>
+				<p>
+					Für Listen oder Aufzählungen in HTML gibt es mehrere Möglichkeiten der
+					Darstellung. Sie haben dabei immer die gleiche Struktur: Sie bestehen
+					aus einem einleitenden Listen Element, den Listenpunkten bzw. dem
+					Listeninhalt und dem beendenden Listen Element.
+				</p>
+				<h3>Listen ohne Listenpunkte</h3>
+				<p>
+					Um eine normale Liste ohne Listenpunkte, das heißt, ohne Aufzählungen,
+					zu erstellen, können Sie das <code>&lt;ul&gt;</code>-Element
+					verwenden. Die Listenpunkte werden dann durch Zeilenumbrüche
+					(<code>&lt;br&gt;</code>) voneinander getrennt. Beispiel:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;ul&gt;
+      Listenpunkt 1&lt;br&gt;
+      Listenpunkt 2&lt;br&gt;
+   &lt;/ul&gt;
+            </pre
+				>
+				<p>Ergebnis:<br /></p>
+				<ul style="color: #fff">
+					Listenpunkt 1<br />
+					Listenpunkt 2<br />
+				</ul>
+				<h3>Listen mit Listenpunkten</h3>
+				<p>
+					Um eine normale Liste mit Listenpunkten, zu erstellen, verwendet man
+					das <code>&lt;ul&gt;</code>-Element zum Erstellen der Liste. Es
+					schließt ein oder mehrere <code>&lt;li&gt;</code>-Elemente ein, welche
+					die Listenpunkte darstellen. Diese <code>&lt;li&gt;</code>-Elemente
+					enthalten den Text, der dem jeweiligen Listenpunkt angefügt werden
+					soll. <br />Beispiel:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;ul&gt;
+      &lt;li&gt;Listenpunkt 1&lt;/li&gt;
+      &lt;li&gt;Listenpunkt 2&lt;/li&gt;
+   &lt;/ul&gt;                  
+            </pre
+				>
+				<p>Das liefert folgendes Ergebnis:</p>
+				<ul>
+					<li>Listenpunkt 1</li>
+					<li>Listenpunkt 2</li>
+				</ul>
+				<p>
+					Das Aussehen der Listenpunkte können Sie über CSS bestimmen. Dafür
+					zuständig ist die Eigenschaft <code>list-style-type</code>.
+				</p>
+				<h3>Zähllisten</h3>
+				<p>
+					Um Zähllisten zu erstellen, können Sie das
+					<code>&lt;ol&gt;</code>-Element verwenden. Bei solchen Listen werden
+					die Listenpunkte durchnummeriert bzw. mit Ziffern versehen. Sie können
+					die Startzahl/-ziffer der Listenpunkte mit dem
+					<code>start</code>-Attribut angeben. Normaleinstellung sollte
+					<code>start="1"</code> sein, kann aber auch verändert werden. Im
+					Einzelnen sehen die Listen dann so aus und können durch die
+					Listenpunkte beliebig erweitert werden:
+				</p>
+				<pre class="prettyprint lang-scm">
+                  
+   &lt;ol start="3"&gt;
+      &lt;li&gt;Listenpunkt 1 (Ziffer 3)&lt;/li&gt;
+      &lt;li&gt;Listenpunkt 2 (Ziffer 4)&lt;/li&gt;
+   &lt;/ol&gt;
+            </pre
+				>
+				<p>Das sieht so aus:</p>
+				<ol start="3">
+					<li>Listenpunkt 1 (Ziffer 3)</li>
+					<li>Listenpunkt 2 (Ziffer 4)</li>
+				</ol>
+				<p>
+					Wenn Sie innerhalb einer Liste eine weitere Liste haben möchten,
+					verläuft zunächst alles wie bei normalen Listen: Sie definieren eine
+					Liste und die dazugehörigen Listeneinträge. An der Stelle, an der eine
+					weitere Gruppierung erfolgen soll, notieren Sie nun einfach in diesen
+					Listeneintrag die neue Liste hinein. Diese Vertiefung der Listenebenen
+					kann theoretisch beliebig weitergeführt werden.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Noch mehr CSS</h2>
+				<p>
+					Regelgruppen fassen Selektoren zusammen, für die gemeinsame
+					Eigenschaften gelten. Im Beispiel oben sollen Überschriften
+					<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> und
+					<code>&lt;h3&gt;</code> jeweils einen Rahmen unten zeigen. Im zweiten
+					Beispiel gilt die Schriftfamilie für das p-Elemente genauso wie für
+					<code>&lt;ul&gt;</code>- und <code>&lt;ol&gt;</code>-Elemente. Das
+					sieht so aus:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   h1, h2, h3 { 
+      border-bottom: 2px solid gray; 
+   }
+            </pre
+				>
+				<p>
+					CSS Regelgruppen halten das Stylesheet ebenfalls kurz, helfen bei der
+					Organisation des Stylesheets und halten Eigenschaften konsistent.<br />
+					Wenn CSS-Stile in Konflikt geraten, weil sie extern in der CSS-Datei,
+					im style-Tag, in einer inline-Regel und im Stylesheet des Benutzers
+					unterschiedlich deklariert sind, löst die Kaskade den Konflikt. Die
+					Regel, die dem Element am nächsten liegt, hat die höhere Priorität.
+				</p>
+				<img src="../pictures/cascading.svg" alt="CSS-hierarchie" />
+				<p>
+					Hier sieht man also: Das Inline-Element im
+					<code>style=““</code>-Attribut hat die höchste Priorität.
+				</p>
+				<ol>
+					<li>
+						Eine CSS-Eigenschaft überschreibt die vom Browser vorgegebene
+						Eigenschaft.
+					</li>
+					<li>
+						Führen CSS-Stile zu Konflikten innerhalb des globalen Stylesheets,
+						übertrumpft die Regel, die zuletzt im globalen Stylesheet aufgeführt
+						wird.
+					</li>
+					<li>
+						Eine genauer definierte Stylesheet-Regel überschreibt eine weniger
+						genau deklarierte Regel.
+					</li>
+				</ol>
+				<pre class="prettyprint lang-scm">
+
+   h1, h2, h3 { 
+      color: teal; 
+   }
+
+   h4 { 
+      color: darkorange; 
+   }
+            </pre
+				>
+				<p>
+					Hier würde die zweite <code>&lt;h4&gt;</code>-Regel die erste
+					überschreiben.<br />
+					Ebenfalls gibt es wie bei Java auch das Prinzip der Vererbung. Wenn
+					man bspw. eine CSS-Eigenschaft für den
+					<code>&lt;body&gt;</code>-Deklariert wird diese (soweit nicht in einer
+					anderen Klasse überschrieben) auf jedes Element, das im
+					<code>&lt;body&gt;</code> steht vererbt.
+				</p>
+				<h3>Klassen und ID's</h3>
+				<p>
+					In dem Fall, dass man verschiedene Überschriften mit dem gleichen
+					HTML-Tag anders formatieren möchte, benötigt man Klassen oder ID’s.
+					CSS-Elemente können über diese beiden „Bezeichner“ angesprochen
+					werden. Dazu werden die HTML-TAGs um das Attribut
+					<code>class="klassenname" bzw. id="idname"</code> erweitert. Das
+					besondere an CLASS ist, dass damit mehrere Elemente ausgezeichnet
+					werden können, dagegen die ID nur für ein Element pro HTML-Seite
+					verwendet werden darf. ID dient also zur eindeutigen Bestimmung eines
+					Elementes. <br />
+					Über die Klassen können wiederholende Designelemente bestimmt werden.
+					Klassennamen stehen im CSS-File nach einem Punkt <code>(.)</code>. Im
+					folgenden Beispiel werden im Text mehrere Stellen mit einer Art
+					Textmarker hervorgehoben.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;style&gt;
+      .textmarkergruen {
+      background-color: greenyellow;
+      color: black;
+      }
+   &lt;/style&gt; 
+
+   &lt;--im Beispiel wird diese--&gt;
+   &lt;strong class="textmarkergruen"&gt;Stelle im Text&lt;/strong&gt;
+   &lt;--mit einer Art--&gt;
+   &lt;strong class="textmarkergruen"&gt;Textmarker&lt;/strong&gt; 
+   &lt;--hervorgehoben.--&gt;
+            </pre
+				>
+
+				<style>
+					.textmarkergruen {
+						background-color: greenyellow;
+						color: black;
+					}
+				</style>
+
+				<p>
+					Das Ergebnis im Browser sieht dann wie folgt aus: <br />
+					im Beispiel wird diese
+					<strong class="textmarkergruen">Stelle im Text</strong>
+					mit einer Art
+					<strong class="textmarkergruen">Textmarker</strong>
+					hervorgehoben.
+				</p>
+				<p>
+					Elemente, die es nur einmal gibt, z.B. die Steuerung, können so mit
+					einer ID und dem dazugehörigen CSS-Design ausgestattet werden.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;style&gt;
+      #navi {
+         background-color: silver;
+         border: 2px dotted orange;
+         float: left;
+      }
+   &lt;/style&gt;
+
+   &lt;div id="navi"&gt;
+      &lt;ul&gt;
+         &lt;li&gt;&lt;a href="index.htm"&gt;Startseite&lt;/a&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;a href="impressum.htm"&gt;Impressum&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/div&gt;
+            </pre
+				>
+				<p>Das Ergebnis im Browser sieht dann wie folgt aus: <br /></p>
+				<style>
+					#navi {
+						background-color: silver;
+						border: 2px dotted orange;
+						float: left;
+					}
+				</style>
+
+				<div id="navi">
+					<ul>
+						<li><a href="">Startseite</a></li>
+						<li><a href="">Impressum</a></li>
+					</ul>
+				</div>
+				<br />
+				<br />
+				<br />
+				<br />
+				<br />
+				<p>
+					Egal, ob eine ID oder eine class im CSS angesprochen wird, das
+					Erscheinungsbild auf der Webseite ist bei gleicher Formatierung
+					dasselbe. Der wichtige Unterschied liegt jedoch in der Semantik: IDs
+					werden im CSS höher gewertet als Klassen. Das bedeutet, dass, wenn ein
+					Element sowohl einer Klasse als auch einer ID angehört, die
+					Formatierung der ID ausgegeben wird. Daher sollten IDs auch unbedingt
+					als solche genutzt und nicht durch das class-Attribut ersetzt werden.
+					Nur so kann eine saubere Semantik im Dokument beibehalten werden.<br />
+					Wir können einem einzelnen HTML-Element mehrere Klassen zuweisen und
+					beide Klassen einzeln stylen, um CSS effizienter zu schreiben. Mit
+					diesem Ansatz können wir die Redundanz in den angewendeten Stilen
+					steuern. Wir können die gemeinsamen Stile auf mehrere Klassen anwenden
+					und die einzigartigen Stile auf die spezifische Klasse anwenden.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   .rot { 
+      color: #FF0000;
+   }
+   .riesig { 
+      font-size: 24px; 
+   }
+
+   &lt;span class="rot riesig"&gt;Wort&lt;/span&gt;
+            </pre
+				>
+				<style>
+					.rot {
+						color: #ff0000;
+					}
+					.riesig {
+						font-size: 24px;
+					}
+				</style>
+				<p>
+					Das Ergebnis sieht so aus:<br />
+					<span class="rot riesig">Wort</span>
+				</p>
+			</div>
+			<div class="section-gap">
+				<h3>Funktionen in JavaScript</h3>
+				<p>
+					Funktionen sind ein Block von Anweisungen mit einem Namen. Der
+					Funktionsblock wird einmal definiert: Dann können die
+					Javascript-Befehle der Funktion über den Namen mehrfach im Programm
+					aufgerufen werden.<br />
+					Das Zusammenfassen von Befehlen in einer Funktion verbessert die
+					Lesbarkeit des Scripts und verhindert Fehler.<br />
+					Ohne den Einsatz von Funktionen werden die Befehle eines Programms
+					oder Scripts Zeile für Zeile durchgeführt. Hingegen überspringt der
+					Javascript-Interpreter alle Anweisungen innerhalb einer Funktion, bis
+					die Funktion mit ihrem Namen (gefolgt von runden Klammern) aufgerufen
+					wird.<br />
+					Eine Funktion beginnt mit dem Schlüsselwort function gefolgt vom Namen
+					der Funktion, gefolgt von einem Paar runder Klammern mit den
+					Parametern der Funktion. Kommas trennen die Parameter der Funktion –
+					wenn eine Funktion keine Parameter hat, bleibt die Klammer leer. Die
+					Anweisungen der Funktion stehen in einem Paar geschweifter Klammern.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   function machWas(param1, param2) {
+      Anweisung;
+      Anweisung; 
+         …
+      Anweisung;
+   }              
+            </pre
+				>
+				<p>
+					Funktionsnamen dürfen genauso wie Variablennamen keine Leer- oder
+					Sonderzeichen enthalten (nur der Unterstrich "<code>_</code>" ist
+					erlaubt) und sollten nicht länger als 32 Zeichen sein.<br />
+					Am Ende des Funktionsblocks sollte ein <code>return</code>-Befehl
+					stehen (muss aber nicht), um die Kontrolle wieder an die Stelle im
+					Code zurückzugeben, von der aus die Funktion aufgerufen wurde. Das
+					Schlüsselwort return kann ein Wert zurückgeben – wenn die Funktion
+					keine <code>return</code>-Anweisung oder <code>return</code> ohne
+					einen Wert notiert, gibt die Funktion undefined zurück.<br />
+					Alle Variablen, die innerhalb einer Funktion mit <code>var</code> oder
+					<code>let</code> vereinbart werden, sind nur innerhalb der Funktion
+					bekannt und gültig. Was klingt wie eine Einschränkung, ist tatsächlich
+					eine der wichtigsten Sicherungsmaßnahmen: So wird die Variable zu
+					einer lokalen Variablen. Wird in einer anderen Funktion eine Variable
+					mit demselben Namen definiert, stören sich die Variablen nicht
+					gegenseitig und können einander nicht überschreiben. Der Aufruf einer
+					Funktion darf vor oder nach der Deklaration der Funktion stehen, aber
+					die Argumente müssen vor dem Aufruf bekannt sein. Im Funktionsaufruf
+					stehen die Parameter in der Reihenfolge, in der sie bei der
+					Deklaration der Funktion aufgeführt sind.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Übung</h2>
+				<p>Dazu haben wir folgende Übung durchgeführt: <br /></p>
+				<img src="../pictures/Bohnenaufgabe.png" alt="Bohnenaufgabe" />
+				<p><a href="../../Vorlesung 4/home.html" target="_blank">Lösung</a>:</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;body&gt;
+      &lt;div id="ausgabe"&gt;&lt;/div&gt;
+      &lt;script&gt;
+         let string = 'Lorem ipsum dolor sit amet BBB';
+         let eingabeUser = prompt('Bitte einen Buchstaben Eingeben!');
+
+         function countBs(beispiel) {
+            return countChar(beispiel, 'B');
+         }
+         function countChar(sentence, chara) {
+            let count = 0;
+            for (let i = 0; i &lt;= sentence.length; i++) {
+               if (sentence[i] == chara) {
+                  count++;
+               }
+            }
+            return count;
+         }
+
+         let countChar2 = (beispiel) =&gt; {
+            let count = 0;
+            for (let i = 0; i &lt;= beispiel.length; i++) {
+               if (beispiel[i] == eingabeUser) {
+                  count++;
+               }
+               return count;
+            }
+         };
+         if (eingabeUser == 'B') {
+            ausgabe.innerHTML =
+               "Der String '" + string + "' besitzt " + countBs(string) + " B's.";
+         } else {
+            ausgabe.innerHTML =
+               "Der String '" +
+               string +
+               "' besitzt den Buchstaben " +
+               countChar(string, eingabeUser) +
+               ' Mal.';
+         }
+      &lt;/script&gt;
+   &lt;/body&gt;
+            </pre
+				>
+			</div>
+		</main>
+		<footer class="section-gap">
+			<div class="footer">
+				<a href="WebDevVorlesung5.html">Nächste Vorlesung</a>
+			</div>
+			<div>
+				<p class="cright">
+					&copy; 2022 Niclas Kusenbach &ndash; Alle Rechte Vorbehalten.
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

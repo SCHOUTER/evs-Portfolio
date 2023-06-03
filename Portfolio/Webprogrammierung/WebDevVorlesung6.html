@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vorlesung 6 &ndash; Portfolio &ndash; Niclas Kusenbach</title>
+		<link rel="stylesheet" href="../index.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+		/>
+		<link
+			rel="shortcut icon"
+			href="../pictures/logo_small_icon_only_inverted.png"
+			type="image/x-icon"
+		/>
+		<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+	</head>
+	<body>
+		<header class="navbar">
+			<div>
+				<ul>
+					<div class="dropdown">
+						<a href="../../index.html#webprogrammierung" class="item active"
+							>Webprogrammierung</a
+						>
+						<div>
+							<ul class="dropcontent">
+								<li><a href="WebDevVorlesung1.html">Vorlesung 1</a></li>
+								<li><a href="WebDevVorlesung2.html">Vorlesung 2</a></li>
+								<li><a href="WebDevVorlesung3.html">Vorlesung 3</a></li>
+								<li><a href="WebDevVorlesung4.html">Vorlesung 4</a></li>
+								<li><a href="WebDevVorlesung5.html">Vorlesung 5</a></li>
+								<li><a href="WebDevVorlesung6.html">Vorlesung 6</a></li>
+								<li><a href="WebDevVorlesung7.html">Vorlesung 7</a></li>
+								<li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+							</ul>
+						</div>
+					</div>
+					<a class="name" href="../../index.html">Niclas Kusenbach</a>
+					<a href="../../index.html#verteilteSysteme" class="item"
+						>Verteilte Systeme</a
+					>
+				</ul>
+			</div>
+		</header>
+		<main class="global section-gap">
+			<div class="section-gap">
+				<div class="heading section-gap">
+					<h1>Vorlesung 6 &ndash; Sitzung vom 1.12.2022</h1>
+				</div>
+				<p>
+					In der sechsten Vorlesung haben wir uns mit Objekten
+					auseinandergesetzt. Im Gegensatz zu primitiven Datentypen dienen
+					Objekte zur Speicherung von Schlüssel-Wert-Paaren komplexerer Daten.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Objekte</h2>
+				<p>
+					Neben vielen vordefinierten Objekten wie bspw. Date und Math kann man
+					in JavaScript auch eigene Objekte erzeugen, deren Eigenschaften
+					auslesen und Methoden aufrufen. Objekte können mit Gegenständen im
+					wirklichen Leben verglichen werden und Eigenschaften haben, die die
+					Merkmale beschreiben. Es gibt verschiedene Möglichkeiten JavaScript
+					Objekte zu erzeugen:<br />
+				</p>
+				<ul>
+					<li>Mit einem Konstruktor: <code>object()</code></li>
+					<li>über Literale <code>{}</code> JSON</li>
+					<li>Konstruktorfunktion / Prototypen</li>
+					<li>Klassenschreibweise</li>
+				</ul>
+				<p>
+					Wenn wir nun ein Objekt erzeugen wollen, sieht dies über den
+					Konstruktor wie folgt aus:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   var mensch = new Object();
+					</pre
+				>
+				<p>
+					Jetzt haben wir eine Objekthülle, allerdings ohne jeglichen Inhalt und
+					Funktionalität. Dem Menschen können wir nun einen Namen zuweisen:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   mensch.name = „Peter“;
+	</pre
+				>
+				<p>
+					Hier erkennen wir, dass auf die Methoden und Attribute eines Objekts
+					mit dem Punkt-Operator zugegriffen wird.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Objekt-Literale</h2>
+				<p>
+					In der Programmierung ist ein Objektliteral eine durch Komma getrennte
+					Liste von Name-Wert-Paaren, die in geschweifte Klammern eingeschlossen
+					sind. Die Name-Wert-Paare, die auch als Eigenschaften und Methoden
+					bezeichnet werden, definieren die Merkmale und das Verhalten des
+					Objekts. Objektliterale bieten eine prägnante und bequeme Möglichkeit,
+					Objekte in JavaScript und anderen Programmiersprachen zu erstellen.
+					<br />
+					Hier ist ein Beispiel von einem Objekt-Literal in JavaScript:
+				</p>
+				Hier ist ein Beispiel von einem Objekt-Literal in JavaScript:
+				<pre class="prettyprint lang-scm">
+
+   const person = {
+   name: "John Doe",
+   age: 35,
+   gender: "male",
+   speak: function() {
+   console.log("Hello, my name is " + this.name);
+     }
+   };
+	</pre
+				>
+				<p>
+					Hier sieht man am Ende noch eine Methode in dem Objekt-Literal.
+					Objektliterale können verwendet werden, um Objekte spontan zu
+					erstellen und um verwandte Daten und Funktionen zusammenzufassen. Sie
+					werden auch häufig verwendet, um Standardwerte für Funktionsargumente
+					anzugeben, was die Erstellung und Verwendung von Funktionen mit
+					mehreren Parametern erleichtert.
+				</p>
+				<h3>JSON</h3>
+				<p>
+					JSON (JavaScript Object Notation) ist ein weit verbreitetes
+					Datenaustauschformat, das Daten als eine Sammlung von Name-Wert-Paaren
+					darstellt, ähnlich den Objektliteralen in JavaScript. JSON wird häufig
+					zur Übertragung von Daten über eine Netzwerkverbindung oder zur
+					Speicherung von Daten in einer Datei oder Datenbank verwendet. In
+					JavaScript sind Objektliterale und JSON-Objekte insofern ähnlich, als
+					sie beide eine Sammlung von Name-Wert-Paaren darstellen. Es gibt
+					jedoch einige wichtige Unterschiede zwischen den beiden. Einer der
+					Hauptunterschiede besteht darin, dass JSON-Objekte nur
+					Eigenschaftsnamen enthalten können, die Strings sind, während
+					Objektliterale jeden gültigen JavaScript-Bezeichner als
+					Eigenschaftsnamen verwenden können. JSON-Objekte können auch keine
+					Funktionen enthalten, während Objektliterale Methoden enthalten
+					können.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   {
+      "name": "John Doe",
+      "age": 35,
+      "gender": "male"
+   }
+				 </pre
+				>
+				<p>
+					Wie Sie sehen können, ist dieses JSON-Objekt dem Beispiel für das
+					Objektliteral von vorhin sehr ähnlich. Allerdings sind die
+					Eigenschaftsnamen alle von Anführungszeichen umgeben, und es ist keine
+					speak-Methode enthalten. Um ein JavaScript-Objektliteral in einen
+					JSON-String zu konvertieren, können Sie die Methode
+					<code>JSON.stringify()</code> verwenden. Um einen JSON-String in ein
+					JavaScript-Objekt zu konvertieren, können Sie die Methode
+					<code>JSON.parse()</code> verwenden.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h3>JavaScript Konstruktoren</h3>
+				<p>
+					In JavaScript ist ein Konstruktor eine spezielle Art von Funktion, die
+					zum Erstellen und Initialisieren von Objekten verwendet wird.
+					Konstruktoren werden mit dem Schlüsselwort
+					<code>class</code> definiert und können zur Erstellung von Objekten
+					mit dem Schlüsselwort <code>new</code> verwendet werden. Hier ist ein
+					Beispiel für eine einfache Personenklasse mit einem Konstruktor:
+				</p>
+				<pre class="prettyprint lang-scm">
+					
+   class Person {
+      constructor(name, age) {
+      this.name = name;
+      this.age = age;
+   }			 
+				</pre
+				>
+				<p>
+					In diesem Beispiel nimmt die Funktion constructor() zwei Argumente,
+					<code>name</code> und <code>age</code>, und weist sie den
+					Eigenschaften <code>name</code> und <code>age</code> des zu
+					erstellenden Objekts zu. Um ein neues Person-Objekt mit diesem
+					Konstruktor zu erstellen, verwenden Sie das Schlüsselwort
+					<code>new</code> wie folgt:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   const john = new Person("John Doe", 35);
+	</pre
+				>
+				<p>
+					Dadurch wird ein neues Person-Objekt mit dem Namen "John Doe" und dem
+					Alter 35 erstellt. Neben der Initialisierung von Eigenschaften können
+					Konstruktoren auch andere Methoden und Code enthalten, um das
+					Verhalten der mit der Klasse erstellten Objekte zu definieren.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Klassen</h2>
+				<p>
+					Und hier haben wir auch schon die Verwendung von Klassen gesehen. In
+					JavaScript ist eine Klasse eine Art von Funktion, die zur Definition
+					eines Entwurfs für die Erstellung von Objekten verwendet wird. Sie
+					bieten eine Syntax zur Definition objektorientierter Klassen mit
+					Eigenschaften und Methoden. Hier ein Beipiel für eine simple Klasse
+					'Person':
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   class Person {
+      constructor(name, age) {
+         this.name = name;
+         this.age = age;
+      }
+
+      toString() {
+         console.log("Hello, my name is " + this.name);
+      }
+   }
+					</pre
+				>
+				<p>
+					In diesem Beispiel hat die Klasse Person eine
+					<code>constructor()</code>-Methode, die aufgerufen wird, wenn ein
+					neues Person-Objekt erstellt wird. Die Methode
+					<code>constructor()</code> initialisiert die Eigenschaften
+					<code>name</code> und <code>age</code> des Objekts. Um ein neues
+					Person-Objekt zu erstellen, verwenden Sie das Schlüsselwort
+					<code>new</code> und rufen die Person-Klasse wie eine Funktion auf.
+					Das haben wir oben schon gesehen als wir die Variable
+					<code>const john</code> deklariert haben. Man kann dann die Methode
+					<code>toString()</code> für das Objekt <code>john</code> wie folgt
+					aufrufen:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   john.speak(); // Outputs: "Hello, my name is John Doe"
+	</pre
+				>
+				<p>
+					Klassen in JavaScript bieten eine saubere und leistungsfähige Syntax
+					für die Definition und Erstellung von Objekten. Sie sind ein zentrales
+					Konzept in der objektorientierten Programmierung und werden in vielen
+					verschiedenen Anwendungen und Kontexten verwendet. Außerdem können
+					JavaScript Klassen mit <code>extends</code> vererbt werden. In
+					JavaScript bezieht sich der <code>this</code>-Operator auf den
+					aktuellen Kontext einer Funktion oder Methode. Es handelt sich um ein
+					spezielles Schlüsselwort, das automatisch im Rahmen jeder Funktion
+					oder Methode definiert wird. Der Wert von <code>this</code> hängt
+					davon ab, wie die Funktion oder Methode aufgerufen wird. Außerdem gibt
+					es noch Objectdestrukturierung, mit der man Eigenschaften aus einem
+					Objekt extrahieren und sie Variablen zuweisen kann. Dies kann nützlich
+					sein, wenn man mit den Eigenschaften eines Objekts in einem separaten
+					Teil des Codes arbeiten will, oder nur einige wenige Eigenschaften aus
+					einem großen Objekt extrahieren will. Hier ist ein Beispiel für die
+					Destrukturierung von Objekten in JavaScript:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   const user = {
+      name: "John Doe",
+      email: "johndoe@gmail.com",
+      age: 32
+   };
+   // Destructure the "name" and "age" properties from the "user" object
+   const { name, age } = user;
+
+   console.log(name); // Output: "John Doe"
+   console.log(age); // Output: 32				 
+				</pre
+				>
+				<h3>Kapselung</h3>
+				<p>
+					Kapselung verbirgt die internen Details oder die Implementierung eines
+					Objekts vor der Außenwelt. Durch Kapselung können Sie Module mit einer
+					klar definierten Schnittstelle erstellen, die andere Teile Ihres Codes
+					verwenden können, ohne dass sie wissen müssen, wie das Modul
+					implementiert ist. Die Kapselung ist neben der Vererbung und der
+					Polymorphie eines der Grundprinzipien der objektorientierten
+					Programmierung (OOP). Sie wird in der Regel durch die Verwendung von
+					Zugriffsmodifikatoren wie den Schlüsselwörtern <code>public</code>,
+					<code>private</code> und <code>protected</code> erreicht, die
+					festlegen, ob auf eine Eigenschaft oder Methode einer Klasse von
+					außerhalb der Klasse zugegriffen werden kann.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   class User {
+      // The "name" property is "private"
+      // It can only be accessed from within the User class
+      #name = "John Doe";
+
+      // The "getName()" method is "public"
+      // It can be called from outside the User class
+      getName() {
+         return this.#name;
+      }
+   }
+
+   const user = new User();
+   console.log(user.getName()); // Output: "John Doe"					 
+				</pre
+				>
+			</div>
+			<div class="section-gap">
+				<p>
+					Um mit Klassen umgehen zu lernen haben wir eine Übung mit
+					Objektkonstrutkoren gemacht:
+				</p>
+				<img
+					src="../pictures/Objektkonstruktoren.png"
+					alt="Aufgabe zu Objektkonstruktoren"
+				/>
+				<p>
+					Die Lösung dazu ist
+					<a href="../../Vorlesung 6/home.html" target="_blank">hier</a> zu
+					finden.
+				</p>
+			</div>
+		</main>
+		<footer class="section-gap">
+			<div class="footer">
+				<a href="WebDevVorlesung7.html">Nächste Vorlesung</a>
+			</div>
+			<div>
+				<p class="cright">
+					&copy; 2022 Niclas Kusenbach &ndash; Alle Rechte Vorbehalten.
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

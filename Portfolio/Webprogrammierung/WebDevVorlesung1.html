@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vorlesung 1 &ndash; Portfolio &ndash; Niclas Kusenbach</title>
+		<link rel="stylesheet" href="../index.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+		/>
+		<link
+			rel="shortcut icon"
+			href="../pictures/logo_small_icon_only_inverted.png"
+			type="image/x-icon"
+		/>
+		<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+	</head>
+	<body>
+		<header class="navbar">
+			<div>
+				<ul>
+					<div class="dropdown">
+						<a href="../../index.html#webprogrammierung" class="item active"
+							>Webprogrammierung</a
+						>
+						<div>
+							<ul class="dropcontent">
+								<li><a href="WebDevVorlesung1.html">Vorlesung 1</a></li>
+								<li><a href="WebDevVorlesung2.html">Vorlesung 2</a></li>
+								<li><a href="WebDevVorlesung3.html">Vorlesung 3</a></li>
+								<li><a href="WebDevVorlesung4.html">Vorlesung 4</a></li>
+								<li><a href="WebDevVorlesung5.html">Vorlesung 5</a></li>
+								<li><a href="WebDevVorlesung6.html">Vorlesung 6</a></li>
+								<li><a href="WebDevVorlesung7.html">Vorlesung 7</a></li>
+								<li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+							</ul>
+						</div>
+					</div>
+					<a class="name" href="../../index.html">Niclas Kusenbach</a>
+					<a href="../../index.html#verteilteSysteme" class="item"
+						>Verteilte Systeme</a
+					>
+				</ul>
+			</div>
+		</header>
+		<main class="global section-gap">
+			<div class="section-gap">
+				<div class="heading section-gap">
+					<h1>Vorlesung 1 &ndash; Sitzung vom 10.10.2022</h1>
+				</div>
+				<p>
+					Der ersten Vorlesung im Fach „Entwicklung verteilter Systeme“ habe ich
+					mit Freude entgegengeblickt, da ich meine ersten Berührungspunkte mit
+					Webdevelopment schon mit 13 Jahren hatte und mich seitdem in
+					regelmäßigen Abständen damit auseinander gesetzt habe.<br />
+					Die erste Vorlesung ist wie immer am Anfang geprägt von einer
+					Vorstellungsrunde, einer groben Erläuterung der Themen, Literatur und
+					bisherigen Erfahrungen. Anschließend haben wir mehrere Optionen zur
+					Gestaltung der Prüfungsleistung bekommen, die bis zur nächsten Stunde
+					zwischen den Studenten diskutiert werden sollten. <br />
+					Der inhaltliche Teil der Vorlesung begann mit einer generellen
+					Einführung ins Thema Programmieren bzw. Objektorientierte
+					Programmierung (OOP).
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Was ist Objektorientierte Programmierung?</h2>
+				<p>
+					Alles in der objektorientierten Programmierung wird durch sogenannte
+					Objekte dargestellt. Jedes „Ding“ oder „Teil“ in einem Projekt wird
+					durch ein Objekt beschrieben. Die gekapselten Objekte sind
+					wiederverwendbar und lassen sich einzeln und unabhängig bearbeiten.
+				</p>
+				<img
+					src="../pictures/objektorientierte-programmierung.webp"
+					alt="picture for simplifying classes"
+				/>
+				<p>
+					Jedes Objekt besitzt Eigenschaften (auch als Attribute bezeichnet),
+					die dazu dienen das Objekt zu beschreiben. Sie beziehen sich auf genau
+					ein Objekt aus einer Objektgruppe. Diese wird als Klasse bezeichnet.
+					Eine Klasse ist ein Bauplan für ein Objekt. Sie implementiert die
+					verschiedenen Eigenschaften, die jedes Objekt der Klasse später
+					aufweisen soll. Erst bei der Erstellung des Objekts werden den
+					Attributen eines Objekts Werte zugewiesen. Außerdem hat jedes Objekt
+					Methoden (Funktionen), durch die die Fähigkeiten dieses Objekts
+					dargestellt werden. So erhalten Objekte eine gewisse Funktionalität.
+				</p>
+				<h3>Vorteile von OOP</h3>
+				<p>
+					Modularität: Durch die Kapselung können Objekte in sich geschlossen
+					werden, wodurch die Fehlersuche und kollaborative Entwicklung
+					einfacher wird Wiederverwendbarkeit: Jede Klasse und jede Methode kann
+					so häufig wie nötig verwendet werden Generalisierung: Schon in der
+					Phase des Entwurfs können Objekte klassifiziert und Gemeinsamkeiten
+					festgestellt werden Vererbung: Hilft Programmierern Fehler zu
+					vermeiden und Erlaubt die Nutzung vorgefertigter Klassen, Objekte und
+					Methoden
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Deployment einer Anwendung</h2>
+				<p>
+					Software Deployment bezeichnet einen (halb-)automatisch ablaufenden
+					Prozess zur Verteilung von Software, speziell innerhalb von
+					Unternehmen. Das Deployment umfasst die Installation, Konfiguration,
+					Aktualisierung und Wartung von Betriebssystemen, Anwendungen oder
+					Servern. Aufgabe des Deployments ist eine effiziente Ausgestaltung des
+					betrieblichen IT-Management. Größere Firmen bedienen sich dabei meist
+					einer zentralisierten Softwareverteilung. Das erfolgt über
+					eigenständige Softwarelösungen oder Deployment-Skripte. Beides
+					erfordert meist keine Interaktion durch den Nutzer des Systems. Für
+					kleinere Organisationen kann auch ein einzelner Administrator oder ein
+					geschulter Mitarbeiter die Installation und Verteilung durchführen.
+					Alternativ kann ein fertiges Programm ebenfalls als Website zu
+					Verfügung gestellt werden.
+				</p>
+				<h3>Vorteile</h3>
+				<table class="styled-table">
+					<tbody>
+						<thead>
+							<tr>
+								<td width="302"><strong>Desktop-Anwendung</strong></td>
+								<td width="302"><strong>Web-Anwendung</strong></td>
+							</tr>
+						</thead>
+						<tr>
+							<td width="302">
+								Nicht auf dauerhaften Internetzugang angewiesen
+							</td>
+							<td width="302">
+								Zugriff ist unabhängig vom benutzten System möglich
+							</td>
+						</tr>
+						<tr>
+							<td width="302">
+								Bessere Zusammenarbeit zwischen Hard- und Software
+							</td>
+							<td width="302">Keine Einstiegsbarriere durch Installation</td>
+						</tr>
+						<tr>
+							<td width="302">Vollständige Kontrolle über Datenspeicherung</td>
+							<td width="302">Niedrigere Entwicklungs- und Wartungskosten</td>
+						</tr>
+					</tbody>
+				</table>
+				<h3>Nachteile</h3>
+				<table class="styled-table">
+					<tbody>
+						<thead>
+							<tr>
+								<td width="302"><strong>Desktop-Anwendung</strong></td>
+								<td width="302"><strong>Web-Anwendung</strong></td>
+							</tr>
+						</thead>
+						<tr>
+							<td width="302">
+								Eingeschränkt durch Hardware des Desktopsystems
+							</td>
+							<td width="302">Funktionierende Internetverbindung benötigt</td>
+						</tr>
+						<tr>
+							<td width="302">Komplexere Installation</td>
+							<td width="302">Größeres Risiko für Sicherheitslücken</td>
+						</tr>
+						<tr>
+							<td width="302">
+								Hohe Entwicklungskosten; Anwendung muss für jedes Betriebssystem
+								individuell Entwickelt werden
+							</td>
+							<td width="302">
+								Zusammenbruch des Systems bei zu vielen Anfragen/Sekunde
+							</td>
+						</tr>
+						<tr>
+							<td width="302">
+								Hohe Wartungskosten; Aktualisierung muss auf jedem Gerät
+								durchgeführt werden
+							</td>
+							<td width="302">
+								Kompatibilität zwischen versch. Browsern benötigt
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="section-gap">
+				<h2>Software Architektur von Webanwendungen</h2>
+				<p>
+					Geht es um Software Architektur wird zwischen Client- und
+					Server-seitiger Programmierung unterschieden. Zwischen diesen zwei
+					Implementationsformen wird für die Präsentations-, die Applikations-
+					und die Datenschicht entschieden.<br />
+					Wird ein gesamtes System Server-seitig genannt, dann wird auf dem
+					Server ein Programm aufgerufen, das Daten aus einer Datenbank abruft.
+					Diese Daten werden dann in Form von HTML an den Client gesendet. Dabei
+					interagiert der Client nur mit dem Webserver, aber der Webserver
+					interagiert noch mit Java Servlets, CGI und PHP-Anwendungen. Es gibt
+					spezielle (Skript-)Sprachen, die sich für die Entwicklung eines
+					serverseitigen Systems besser eignen, bspw.: Perl, Python und PHP.
+				</p>
+				<table class="styled-table">
+					<tbody>
+						<thead>
+							<tr>
+								<td width="302"><strong>Vorteile</strong></td>
+								<td width="302"><strong>Nachteile</strong></td>
+							</tr>
+						</thead>
+						<tr>
+							<td width="302">
+								Client muss die Clientseitige Ausführung von Programmcode nicht
+								erlauben
+							</td>
+							<td width="302">
+								Ausführung des Programmcodes erfolgt nur bei Aufruf der Website
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					Ein System gilt als Client-seitig, wenn auch das Programm zum Abrufen
+					der Daten (Bspw. ein JavaScript Programm) aus einer Datenbank auf dem
+					Client läuft. Dabei interagiert der Client ebenfalls nur mit dem
+					Webserver. Analog zu Serverseitigen Systemen gibt es
+					(Skript-)Sprachen, die sich speziell für die Entwicklung
+					Clientseitiger Systeme eignen, wie bspw.: JavaScript, Ajax oder
+					Brython
+				</p>
+				<table class="styled-table">
+					<tbody>
+						<thead>
+							<tr>
+								<td width="302"><strong>Vorteile</strong></td>
+								<td width="302"><strong>Nachteile</strong></td>
+							</tr>
+						</thead>
+						<tr>
+							<td width="302">
+								Technische Umgebung des Clients kann berücksichtigt werden
+							</td>
+							<td width="302">
+								Verarbeitung des Programmcodes kann vom Client unterbunden
+								werden
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<p>
+					In der Praxis wird die Client- und Serverseitige Verarbeitung meistens
+					kombiniert.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Skriptsprachen</h2>
+				<p>
+					Das nächste Thema war Skriptsprachen, die mir in der Theorie aus den
+					letzten Semestern bekannt, bisher aus der Praxis aber unbekannt waren.
+					Das Wort Skript stammt aus dem 16. Jahrhundert von lateinisch scriptum
+					à „das Geschriebene“ Eine Skriptsprache zeichnet sich durch die
+					Verwendung eines Interpreters aus. Das heißt, dass der Quellcode bei
+					jeder Ausführung neu übersetzt wird, so dass ein Binärcode nicht nötig
+					ist. Dank dem Wegfall des Deklarationszwangs für Variablen ist eine
+					Skriptsprache schneller erlernbar. Allerdings ist durch den
+					Interpreter die Ausführungsgeschwindigkeit, im Gegensatz zu einer
+					kompilierten Sprache, geringer. Beispiele für Skriptsprachen sind:
+					JavaScript, PHP, Python und Perl.
+				</p>
+				<h3>JavaScript</h3>
+				<p>
+					JavaScript wird genutzt um dynamische Inhalte in Websiten einzubinden.
+					Ebenso nutzen Webentwickler die Funktion häufig, um Eingaben von
+					Benutzern zu verarbeiten. Üblicherweise wird JavaScript gemeinsam mit
+					HTML und der Stylesheet-Sprache CSS verwendet. JavaScript Dateien
+					haben die Endung „<code>.js</code>“. Diese Datei kann durch die
+					Verwendung der
+					<code>&lt;Script&gt;</code>-Tags eingebunden werden. Alternativ lässt
+					sich der Code direkt in den <code>&lt;Script&gt;</code>-Tags
+					ausführen. Die Besonderheit dabei ist, dass durch das sogenannte
+					Document Object Model (DOM) die eigentlich starren Elemente von HTML
+					flexibel verarbeitet und verändert werden können.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;script type="text/javascript"&gt;
+      // JavaScript code
+   &lt;/script&gt;
+            </pre
+				>
+				<p>Im Folgenden einige Beispiel-Funktionen von JavaScript:</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;script type="text/javascript"&gt;
+      // Ausgabe eines Dialogfeldes auf der Website, mit "Hello, World!" als Nachricht.
+      //  Sie kann mit 'ok' bestätigt werden.
+	   alert('Hello, World!')
+      // JavaScript kann mit allen gängigen Rechenoperationen rechnen.
+      // Gleichzeitig wird hier die Variable 'x' deklariert.
+      // Ist eine Ausgabe gewünscht kann das mit alert(x) durchgeführt werden.
+      // Das Ergebnis ist 20.
+      x = 13 + 7 
+   &lt;/script&gt;
+               </pre
+				>
+				<p>
+					Wenn JavaScript nicht direkt beim Aufrufen der Website, sondern erst
+					nach Interaktion durch den User, ausgeführt werden soll, kann bspw.
+					ein Button benutzt werden.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;form&gt;
+      &lt;input type="button" value="Klick" onclick="alert('Hallo, Benutzer!')"&gt;
+   &lt;/form&gt;
+            </pre
+				>
+				<p>
+					Wenn ein Endgerät JavaScript deaktiviert hat gibt es die Option mit
+					dem <code>&lt;noscript&gt;</code>-Tag eine Alternativwebseite oder
+					Alternativcode zur Verfügung zu stellen.
+				</p>
+			</div>
+		</main>
+		<footer class="section-gap">
+			<div class="footer">
+				<a href="WebDevVorlesung2.html">Nächste Vorlesung</a>
+			</div>
+			<div>
+				<p class="cright">
+					&copy; 2022 Niclas Kusenbach &ndash; Alle Rechte Vorbehalten.
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

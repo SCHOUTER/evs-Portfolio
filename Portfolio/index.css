@@ -1,0 +1,347 @@
+/* GLOBAL */
+html {
+   @import url('https://fonts.googleapis.com/css?family=Roboto') !important;
+}
+body {
+   /* word-wrap: break-word; */
+   background-color: var(--e-global-color-secondary);
+   -ms-overflow-style: none; /* for Internet Explorer, Edge */
+   scrollbar-width: none; /* for Firefox */
+   overflow-y: scroll;
+   padding: 0;
+   margin: 0; 
+}
+main {
+   width: 900px;
+   margin: 0 auto;
+}
+  /* Firefox */
+  * {
+   scrollbar-width: auto;
+   scrollbar-color: #ffffff #666666;
+ }
+
+ /* Chrome, Edge, and Safari */
+ *::-webkit-scrollbar {
+   width: 10px;
+ }
+
+ *::-webkit-scrollbar-track {
+   background: #666666;
+ }
+
+ *::-webkit-scrollbar-thumb {
+   background-color: #ffffff;
+   border-radius: 10px;
+   border: 0px none #ffffff;
+ }
+h1 {
+   font-size: 39px;
+   padding: 0px;
+   margin: 110px 0px 30px 0px;
+   line-height: 1;
+   box-sizing: border-box;
+   text-align: center;
+   color: var(--e-global-color-text);
+   font-family: var(--e-global-typography-primary-font-family);
+   font-weight: var(--e-global-typography-primary-font-weight);
+}
+h2 {
+   font-size: 29px;
+   color: var(--e-global-color-text);
+   font-family: var(--e-global-typography-primary-font-family);
+   font-weight: var(--e-global-typography-primary-font-weight);
+}
+h3 {
+   font-size: 19px;
+   color: var(--e-global-color-text);
+   font-family: var(--e-global-typography-primary-font-family);
+   font-weight: var(--e-global-typography-primary-font-weight);
+}
+p {
+   color: var(--e-global-color-text);
+   margin: 20px 0px;
+   font: inherit;
+   font-family: var(--e-global-typography-primary-font-family);
+   font-weight: var(--e-global-typography-text-font-weight);
+   display: block;
+   word-wrap: break-word;
+   line-height: 1.75;
+   font-size: 16px;
+   text-align: justify;
+}
+img {
+   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+   filter: grayscale(100%);
+   margin: 0 auto;
+   display: block;
+   border-radius: 5px;
+   max-width: 870px;
+}
+img::selection {
+   background: none;
+   
+}
+a {
+   color: inherit;
+   text-underline-offset: 2px;
+}
+.imgbackground {
+   background-color: #efefef;
+}
+blockquote {
+   color: var(--e-global-color-text);
+   font-family: var(--e-global-typography-primary-font-family);
+}
+/* ul {
+   list-style: circle;
+} */
+ol {
+
+   padding: 0;
+}
+li {
+   color: var(--e-global-color-text);
+   font-family: var(--e-global-typography-primary-font-family);
+   margin-left: 20px;
+   line-height: 1.75;
+}
+form {
+   margin: 70px;
+   padding: 15px;
+}
+.form {
+   height: 140px;
+}
+:root {
+   --e-global-color-primary: #383e42;
+   --e-global-color-secondary: black;
+   --e-global-color-text: #EFEFEF;
+   --e-global-color-accent: #E79B25;
+   --e-global-typography-primary-font-family: "Roboto";
+   --e-global-typography-primary-font-weight: 600;
+   --e-global-typography-secondary-font-family: "Roboto Slab";
+   --e-global-typography-secondary-font-weight: 400;
+   --e-global-typography-text-font-family: "Roboto";
+   --e-global-typography-text-font-weight: 400;
+   --e-global-typography-accent-font-family: "Roboto";
+   --e-global-typography-accent-font-weight: 500;
+}
+::selection {
+   color: #fff;
+   background: #333;
+   text-shadow: none;
+}
+.section-gap {
+   padding: 10px;
+}
+.footer {
+   margin: 0 auto;
+   padding: 16px;
+   padding-left: 1.6em;
+   text-underline-offset: 0.2em;
+   border-top:  1px solid var(--e-global-color-text);
+   border-bottom: 1px solid var(--e-global-color-text);
+   width: 900px;
+   margin: 0 auto;
+}
+.footer a {
+   text-decoration: none;
+   font-family: var(--e-global-typography-primary-font-family);
+   font-weight: var(--e-global-typography-primary-font-weight);
+   color: var(--e-global-color-text);
+}
+.cright {
+   text-align: center;
+}
+.name {
+   font-weight: 500;
+   font-size: 23px;
+   text-decoration: none;
+   margin: 0 40px;
+   color: var(--e-global-color-text);
+ }
+/* NAVBAR */
+.navbar {
+   width: 100%;
+   height: 80px;
+   background: var(--e-global-color-primary);
+   text-align: center;
+   line-height: 81px;
+   z-index: 20;
+   box-shadow: 4.9px 9.8px 13.1px hsl(0deg 0% 0% / 0.21);
+   font-family: "Roboto";
+   margin: 0 auto;
+   position: fixed;
+ }
+ .item {
+   padding: 10px 16px;
+   margin: 5px;
+   text-decoration: none;
+   transition: 0.3s;
+   border-radius: 50px 50px;
+   color: #efefef;
+   background-color: inherit;
+   font-size: 16px;
+ }
+ .item:hover {
+   background: var(--e-global-color-accent);
+   border-radius: 10px;
+   color: #000;
+   box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
+ } 
+ .item.active {
+     background-color: var(--e-global-color-primary);
+     border: 2px;
+     border-color: #efefef;
+     border-collapse: collapse;
+     border-style: solid;
+ }
+ .dropdown {
+   position: relative;
+   display: inline-block;
+   margin: 0px;
+ }
+ .dropdown .dropcontent {
+   border-radius: 0px 10px 10px 10px;
+ }
+ .dropdown:hover {
+     border-radius: 15px 15px 0px 0px;    
+ }
+ .dropdown:hover .dropcontent {
+   margin: -15px 0px 0px 5px;
+   z-index: 22;
+   border-radius: 0px 10px 10px 10px;
+   visibility: visible;
+ /*   transition: 3s;
+   transition-property: visibility; */
+ }
+ 
+ .dropdown:hover .dropcontent a { 
+     margin: 5px 0px 5px 0px;
+ }
+ .dropdown:hover .dropcontent a:hover {
+   border: none;
+   border-left: 3px solid #efefef;
+   transition: 0.2s;
+   border-radius: 0px 50px 50px 0px;
+   /* color: #000; */
+   margin-left: 5px;
+ }
+ 
+ .dropcontent {
+   min-width: 230px;
+   background: var(--e-global-color-secondary);
+   border: var(--e-global-color-text) 2px solid;
+   position: absolute;
+   margin: -22 0px 0px 5px;
+   line-height: 20px;
+   border-radius: 0px 10px 10px 10px;
+   padding: 10px 5px 5px 5px;
+   z-index: 10;
+   box-shadow: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
+   visibility: hidden;
+ }
+ 
+ a.active:hover {
+     background-color: var(--e-global-color-accent);
+ }
+ ul {
+   padding: 0px;
+   margin: 0px;
+ }
+ .dropcontent li {
+   list-style: none;
+ }
+ ul li a {
+   color: #efefef;
+   padding: 10px 16px;
+   text-decoration: none;
+   display: block;
+   text-transform: uppercase;
+   text-align: left;
+ }
+ form {
+   width: 40%;
+   float: left;
+   margin: 0px 50px;
+ }
+ .dropdown:hover .item {
+   border-radius: 15px 15px 0px 0px;
+   background: var(--e-global-color-accent);
+   color: #000;
+   box-shadow: 5px 9.9px 9.9px hsl(0deg 0% 0% / 35%);
+ }
+
+/* CODEFORMATTER */
+pre,code {
+   color: #33FF00;
+   font-family: monospace, monospace;
+   font-size: 16px;
+}
+
+pre.prettyprint { display: block; background-color: #333; padding: 2px; overflow: auto; border-radius: 5px;}
+pre .nocode { background-color: none; color: #000 }
+pre .str { color: #ffa0a0 } /* string  - pink */
+pre .kwd { color: #f0e68c; font-weight: bold }
+pre .com { color: #87ceeb } /* comment - skyblue */
+pre .typ { color: #98fb98 } /* type    - lightgreen */
+pre .lit { color: #cd5c5c } /* literal - darkred */
+pre .pun { color: #fff }    /* punctuation */
+pre .pln {color: #fff;}    /* plaintext */
+pre .tag { color: #f0e68c; font-weight: bold } /* html/xml tag-ightyellow */
+pre .atn { color: #bdb76b; font-weight: bold } /* attribute name  - khaki */
+pre .atv { color: #ffa0a0 } /* attribute value - pink */
+pre .dec { color: #98fb98 } /* decimal - lightgreen */
+/* TABELLEN */
+.styled-table {
+   border-collapse: collapse;
+   margin: auto;
+   margin-top: 25px;
+   font-size: 0.9em;
+   font-family: sans-serif;
+   min-width: 400px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+   border-radius: 12px;
+   overflow: hidden;
+}
+
+.styled-table code {
+   color: #000;
+}
+.styled-table thead tr {
+   background-color: var(--e-global-color-accent);
+   color: #efefef;
+   text-align: left;
+}
+.styled-table th,
+.styled-table td {
+   padding: 12px 15px;
+   text-align: center;
+}
+.styled-table tbody tr {
+   border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+   background-color: #f3f3f3;
+}
+.styled-table tbody tr:nth-of-type(odd) {
+   background-color: #efefef;
+}
+
+.styled-table tbody tr:last-of-type {
+   border-bottom: 2px solid var(--e-global-color-accent);
+}
+.styled-table tbody tr td:hover {
+   color: var(--e-global-color-accent);
+   transition: 0.35s;
+   border-radius: 6px;
+   overflow: hidden;
+   text-shadow: 0px 0px 25px #000;
+}
+.heading {
+   color: var(--e-global-color-primary);
+   font-family: var(--e-global-typography-primary-font-family),Sans-serif;
+   font-weight: var(--e-global-typography-primary-font-weight);
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vorlesung 2 &ndash; Portfolio &ndash; Niclas Kusenbach</title>
+		<link rel="stylesheet" href="../index.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+		/>
+		<link
+			rel="shortcut icon"
+			href="../pictures/logo_small_icon_only_inverted.png"
+			type="image/x-icon"
+		/>
+		<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+	</head>
+	<body>
+		<header class="navbar">
+			<div>
+				<ul>
+					<div class="dropdown">
+						<a href="../../index.html#webprogrammierung" class="item active"
+							>Webprogrammierung</a
+						>
+						<div>
+							<ul class="dropcontent">
+								<li><a href="WebDevVorlesung1.html">Vorlesung 1</a></li>
+								<li><a href="WebDevVorlesung2.html">Vorlesung 2</a></li>
+								<li><a href="WebDevVorlesung3.html">Vorlesung 3</a></li>
+								<li><a href="WebDevVorlesung4.html">Vorlesung 4</a></li>
+								<li><a href="WebDevVorlesung5.html">Vorlesung 5</a></li>
+								<li><a href="WebDevVorlesung6.html">Vorlesung 6</a></li>
+								<li><a href="WebDevVorlesung7.html">Vorlesung 7</a></li>
+								<li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+							</ul>
+						</div>
+					</div>
+					<a class="name" href="../../index.html">Niclas Kusenbach</a>
+					<a href="../../index.html#verteilteSysteme" class="item"
+						>Verteilte Systeme</a
+					>
+				</ul>
+			</div>
+		</header>
+		<main class="global section-gap">
+			<div class="section-gap">
+				<div class="heading section-gap">
+					<h1>Vorlesung 2 &ndash; Sitzung vom 17.10.2022</h1>
+				</div>
+				<p>
+					In der zweiten Vorlesung haben wir erstmal erklärt bekommen wie ein
+					Webserver und das Internet generell funktioniert.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Was ist eine URL</h2>
+				<p>
+					Wenn ein Benutzer eine Website besuchen will, braucht er die URL
+					dieser Website, die in die Suchleiste des Browsers eingetippt wird.<br />
+					URL steht für "Uniform Resource Locator". Die URL bezieht sich auf
+					eine einzigartige Adresse, die eine Datei auf einem Server angibt.
+					Eine URL ist also das, was wir in unseren Browser eingeben oder was
+					sich hinter einem Link verbirgt. Mit der URL ist es dem Computer
+					möglich, Ressourcen über ein Netzwerkprotokoll zu identifizieren und
+					gezielt auf sie zuzugreifen. Meistens läuft die Verbindung über viele
+					Verbindungsrechner. Bei der Anfrage wird dem anfragenden PC eine
+					Nummer zugeordnet, die den Computer eindeutig identifiziert: Die
+					IP-Adresse. Eine IP-Adresse ist für den Computer, wie die Postadresse
+					für den Menschen. Nun wird vom Browser ein s.g. HTTP-Request an das
+					Domain-Name-System (DNS) gesendet. Der DNS Server wandelt nun die URL
+					in die dazugehörige IP Adresse um. Mit der IP-Adresse kann der
+					Computer eine Verbindung mit dem gesuchten Webserver herstellen, der
+					die Website als HTML-Datei (Hypertext Markup Language) gespeichert
+					hat. Sobald ein Webserver eine solche Anfrage bekommt, sendet er die
+					angefragte Website mit allen Bildern, Videos und sonstigen Dateien
+					zurück.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>HTML</h2>
+				<p>
+					Die Hypertext Markup Language (kurz HTML) ist eine einheitliche
+					textbasierte Auszeichnungssprache. Sie macht Browsern eine
+					Interpretation und Anzeige sowie die Verknüpfung von Webseiten
+					möglich. Die Auszeichnungselemente werden „Tags“ genannt. Im aktuellen
+					Standard nutzt man XHTML und HTML5 um insbesondere
+					Suchmaschinenoptimierte und User-orientierte Webseiten zu erstellen.
+					Ein Beispiel hierfür ist das so genannte Responsive Design, das sich
+					auf das Darstellen auf verschieden großen Geräten bezieht.
+				</p>
+				<table class="styled-table">
+					<thead>
+						<tr>
+							<td>Tags</td>
+							<td>Bedeutung/Ausgabe</td>
+						</tr>
+					</thead>
+					<tr>
+						<td><code>&lt;html&gt;</code></td>
+						<td>Erster Tag im Code; gibt an, dass nun HTML Code folgt</td>
+					</tr>
+					<tr>
+						<td><code>&lt;title&gt;</code></td>
+						<td>Titel der Seite</td>
+					</tr>
+					<tr>
+						<td><code>&lt;meta&gt;</code></td>
+						<td>Metadaten</td>
+					</tr>
+					<tr>
+						<td><code>&lt;script&gt;</code></td>
+						<td>Bindet Code in Skriptsprachen ein</td>
+					</tr>
+					<tr>
+						<td><code>&lt;body&gt;</code></td>
+						<td>Sichtbarer Teil der Website</td>
+					</tr>
+					<tr>
+						<td><code>&lt;p&gt;</code></td>
+						<td>Textabsatz</td>
+					</tr>
+					<tr>
+						<td><code>&lt;h1&gt;,…,&lt;h6&gt;</code></td>
+						<td>Überschriften</td>
+					</tr>
+					<tr>
+						<td><code>&lt;a&gt;</code></td>
+						<td>Verlinkung zu einer anderen Seite (Hyperlink)</td>
+					</tr>
+					<tr>
+						<td><code>&lt;img&gt;</code></td>
+						<td>Einfügen eines Bildes</td>
+					</tr>
+					<tr>
+						<td><code>&lt;b&gt;</code></td>
+						<td>Fettschrift</td>
+					</tr>
+				</table>
+			</div>
+			<div class="section-gap">
+				<h2>Unsere erste kleine Website</h2>
+				<p>
+					Nach den ersten Grundlagen einer HTML-Website haben wir direkt
+					angefangen selber eine einfache Website zu entwickeln. Sie sollte
+					anhand der Zeichnung des Geschäftsführers des Unternehmens
+					„Sternback-Kaffe“ gestaltet werden.
+				</p>
+				<img
+					src="../pictures/Sternback-Aufgabe.jpg"
+					alt="Aufgabe zum Erstellen der ersten eigenen Website"
+				/>
+				<p>
+					Zur Erstellung einer .html Datei benötigt man einen so genannten
+					Editor. Ich benutze der Gewohnheit wegen Visual Studio Code.<br />
+					Dort wird der Quelltext für die Website geschrieben.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;body&gt;
+      &lt;h1&gt;Getränke bei Sternback-Kaffee&lt;/h1&gt;
+      &lt;h2&gt;Hausmischung, € 1.49&lt;/h2&gt;
+      &lt;p&gt;
+         Eine feine, milde Mischung verschiedener Kaffeesorten aus Mexiko, Bolivien und Guatemala.
+      &lt;/p&gt;
+      &lt;h2&gt;Café Latte, € 2.35&lt;/h2&gt;
+      &lt;p&gt;Espresso, heiße Milch und Schokosirup.&lt;/p&gt;
+      &lt;h2&gt;Cappuccino, € 1.89&lt;/h2&gt;
+	   &lt;p&gt;Eine Mischung aus Espresso, heißer Milch und Milchschaum.&lt;/p&gt;
+      &lt;h2&gt;Chai-Tee, € 1.85&lt;/h2&gt;
+      &lt;p&gt;Eine würzige Mélange aus schwarzem Tee, Gewürzen, Milch und Honig.&lt;/p&gt;
+   &lt;/body&gt;
+				</pre
+				>
+				<p>Im Browser wird die Website so dargestellt.</p>
+				<img
+					src="../pictures/Sternback.png"
+					alt="Die erste eigene Website"
+					style="filter: none"
+				/>
+				<p>
+					Hier erkennt man einen deutlichen Unterschied zur Darstellung im
+					Editor. Die Schriftart hat sich verändert, der Hintergrund hat eine
+					andere Farbe und es ist ein Rahmen, um den Text zu erkennen.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Cascading Style Sheets</h2>
+				<p>
+					Bis jetzt haben wir uns nur mit der Struktur einer Website
+					beschäftigt, die durch HTML festgelegt wird. Das Aussehen der Webseite
+					wird durch eine andere Sprache verändert. Cascading Style Sheets (CSS,
+					zu Deutsch: gestufte Stilvorlagen) ist ebenfalls für die
+					Webentwicklung entwickelt worden. Mit CSS können Entwickler zum
+					Beispiel Schriftarten, Farben, Linien, Höhen und Breiten auf einer
+					Webseite verändern. Es gibt verschiedene Arten CSS in eine HTML Datei
+					einzubinden.
+				</p>
+				<ol>
+					<li>
+						Die direkte Formatierung mithilfe des
+						<code>style=““</code>-Attributs. Dies ist die unsauberste
+						Möglichkeit CSS in HTML einzubinden und sollte vermieden werden, da
+						dadurch der Quelltext sehr unübersichtlich und schwer veränderbar
+						wird.
+					</li>
+					<li>
+						Die zentrale Formatierung gilt für das gesamte Dokument. Für diese
+						Art gibt es den <code> &lt;style&gt;</code>-Tag. Dazwischen kann das
+						gesamte für die Website benutze CSS geschrieben werden.
+					</li>
+					<li>
+						Die externe Formatierung: Die Formatierungen werden in eine Datei
+						mit der Endung .css ausgelagert welche dann im HTML durch
+						<code
+							>&lt;link rel="stylesheet" type="text/css"
+							href="dateiname.css"&gt;</code
+						>
+						im <code>&lt;head&gt;</code> eingebunden wird. Dies ist die
+						optimalste Variante, da so die Designangaben für mehrere Dateien
+						genutzt werden können.
+					</li>
+				</ol>
+				<p>
+					In einer CSS-Datei wird nun also das Aussehen festgelegt. Die
+					Designeigenschaften sind als Schlüssel-Werte-Paare definiert. Sie
+					lassen sich über die HTML-Tags, Klassennamen oder ID’s ansprechen. Die
+					oben gezeigte Sternback-Website wurde über den passenden HTML-Tag
+					formatiert.
+				</p>
+				<table class="styled-table">
+					<thead>
+						<tr>
+							<td>Befehl</td>
+							<td>Auswirkung</td>
+						</tr>
+					</thead>
+					<tr>
+						<td><code>background-color</code></td>
+						<td>Verändert die Hintergrundfarbe</td>
+					</tr>
+					<tr>
+						<td><code>margin</code></td>
+						<td>Außenabstand eines Elements</td>
+					</tr>
+					<tr>
+						<td><code>border</code></td>
+						<td>Rahmen eines Elements</td>
+					</tr>
+					<tr>
+						<td><code>padding</code></td>
+						<td>Innenabstand eines Elements</td>
+					</tr>
+					<tr>
+						<td><code>font-family</code></td>
+						<td>Gibt die Schriftart an</td>
+					</tr>
+				</table>
+			</div>
+			<div class="section-gap">
+				<p>
+					Um nun von dem kurzen HTML und CSS Einschub wieder wegzukommen, haben
+					wir mit JavsScript weitergemacht. Nach der Einführung der
+					<code>alert()</code>-Funktion in der ersten Vorlesung, haben wir nun
+					die Funktionsweise des Document Obejct Models (DOM) kennengelernt. Das
+					Document Object Model ist ein W3C-Standard.
+				</p>
+				<h3>Document Object Model</h3>
+				<p>
+					Das Document Object Model (kurz: DOM) ist eine Schnittstelle, die
+					geschaffen wurde, um HTML- oder XML-Dokumente dynamisch verändern und
+					an verschiedene Browserumgebungen anpassen zu können. Grundsätzlich
+					ist sie allerdings nicht auf HTML oder CSS beschränkt, sondern kann
+					für die Definition von Objekten, Eigenschaften und Methoden in
+					unterschiedlichen Programmiersprachen verwendet werden. Das Document
+					Object Model ist für jede Sprache einsetzbar, die auf XML basiert und
+					dementsprechend in einer hierarchischen Baumstruktur darstellbar ist.
+				</p>
+				<div class="imgbackground">
+					<img
+						src="../pictures/DOM-1.svg"
+						alt="DOM Visualisiert"
+						style="filter: none; padding: 0 auto; transform: scale(0.95)"
+						width="100%"
+					/>
+				</div>
+				<p>
+					Nachdem wir nun wissen wie das DOM aufgebaut ist können wir auch
+					verstehen, wie JavaScript mithilfe des DOM diesen verändern kann und
+					direkt auf einzelne Bestandteile von ihm zugreifen kann. So haben wir
+					beispielsweise unsere erste manipulative Funktion kennengelernt. Mit
+					<code>.innerHTML</code> kann man auf sich den Inhalt eines HTML
+					Elements zurückgeben lassen oder verändern.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   //Ermittelt den HTML-Inhalt eines Elements mit id="myP":
+   let html = document.getElementById("myP").innerHTML;
+   //Change the HTML content of an element with id="demo":
+   document.getElementById("demo").innerHTML = "I have changed!";
+			  </pre
+				>
+				<p>
+					Außerdem haben wir eine zu <code>alert()</code> ähnliche Funktion
+					kennengelernt. Die <code>prompt()</code>-Funktion zeigt ein Dialogfeld
+					an, in dem der Benutzer zur Eingabe aufgefordert wird. Sie gibt den
+					Eingabewert zurück, wenn der Benutzer auf "OK" klickt, andernfalls
+					gibt sie null zurück. Man sollte diese Funktion nicht zu häufig
+					verwenden, denn sie verhindert, dass der Benutzer auf andere Teile der
+					Seite zugreifen kann, bis das Feld geschlossen wird. Beispielsweise
+					wir hier die Eingabe des Benutzers auf die Anzeige „Bitte gib deinen
+					Name ein“ in der Variable person gespeichert.
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   let person = prompt("Bitte gibt deinen Namen ein");
+ </pre
+				>
+				<p>Das sieht auf der Website so aus:</p>
+				<img src="../pictures/alert().png" alt="alert()-Funktion" />
+				<p>
+					Das kann noch mit
+					<code> let alter = prompt(„Wie alt sind Sie?“)</code> ergänzt werden.
+					Kombiniert kann das ganze so zusammengefügt werden:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   alert("Herzlich Willkommen " + person + " auf meiner Website! Sie sind " + 
+   		alter + " Jahre alt.")
+				</pre
+				>
+				<p>
+					Alternativ kann der Text auch in die Konsole ausgegeben werden. Dort
+					kann ebenfalls Text ausgegeben werden, er bleibt dem normalen Benutzer
+					allerdings normalerweise verborgen, da die meisten diese Funktion
+					nicht kennen. Dazu müssen wir den Inhalt der
+					<code>alert()</code>-Funktion in die
+					<code>console.log()</code>-Funktion übertragen. Das sieht so aus:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   let person = prompt("Bitte gibt deinen Namen ein");
+   let alter = prompt("Wie alt sind Sie?");
+   console.log("Herzlich Willkommen " + person + " auf meiner Website! Sie sind " + 
+	alter + " Jahre alt.")
+					</pre
+				>
+				<p>
+					Die Konsole des Browsers versteckt sich in den Entwicklertools, die
+					entweder mit der f12-Taste oder mit Strg + Shift + I aufgerufen werden
+					können.<br />
+					Der obige Code sieht dort so aus:
+				</p>
+				<img
+					src="../pictures/KonsoleAusgabe.png"
+					alt="Ausgabe in der Konsole"
+				/>
+			</div>
+		</main>
+		<footer class="section-gap">
+			<div class="footer">
+				<a href="WebDevVorlesung3.html">Nächste Vorlesung</a>
+			</div>
+			<div>
+				<p class="cright">
+					&copy; 2022 Niclas Kusenbach &ndash; Alle Rechte Vorbehalten.
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

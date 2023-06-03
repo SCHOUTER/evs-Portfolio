@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="715.48999"
+   height="464.60001"
+   version="1.1"
+   viewBox="0 0 715.48999 464.60001"
+   id="svg52"
+   sodipodi:docname="73e19694ce31bf7f6a6b470dc0ef95b9.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs56" />
+  <sodipodi:namedview
+     id="namedview54"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0" />
+  <title
+     id="title2">Cascading – wenn CSS aus mehreren Quellen kommt</title>
+  <path
+     d="M 0,0 V 109.23 H 163.65 V 24.794 L 138.859,0.003 Z"
+     fill="#b4d4dd"
+     id="path4" />
+  <path
+     d="M 163.65,24.791 138.859,5.6767e-8 V 24.791 Z"
+     fill="#ffe6d5"
+     id="path6" />
+  <text
+     x="19.992432"
+     y="26.2883"
+     fill="#333333"
+     font-family="sans-serif"
+     font-size="16px"
+     id="text16"><tspan
+       x="20"
+       y="26.2883"
+       id="tspan8">p {</tspan><tspan
+       x="28"
+       y="46.2883"
+       id="tspan10">font-size: 18px;</tspan><tspan
+       x="28"
+       y="66.2883"
+       id="tspan12">color:blue;</tspan><tspan
+       x="20"
+       y="86.2883"
+       id="tspan14">}</tspan></text>
+  <path
+     d="M 192.92,117.07 V 325.59 H 486.25 V 164.39 L 438.922,117.062 Z"
+     fill="#b4d4dd"
+     id="path18" />
+  <path
+     d="M 486.25,164.39 438.922,117.062 V 164.39 Z"
+     fill="#ffe6d5"
+     id="path20" />
+  <text
+     x="206.4201"
+     y="152"
+     fill="#333333"
+     font-family="sans-serif"
+     font-size="16px"
+     id="text36"><tspan
+       x="206"
+       y="152"
+       id="tspan22">&lt;link href=&quot;style.css&quot;&gt;</tspan><tspan
+       x="206"
+       y="175"
+       id="tspan24">&lt;style&gt;</tspan><tspan
+       x="216"
+       y="198"
+       id="tspan26">p {</tspan><tspan
+       x="226"
+       y="221"
+       id="tspan28">font-size: 14px;</tspan><tspan
+       x="226"
+       y="245"
+       id="tspan30">margin-top:2em;</tspan><tspan
+       x="216"
+       y="268"
+       id="tspan32">}</tspan><tspan
+       x="206"
+       y="291.24515"
+       id="tspan34">&lt;/style&gt;</tspan></text>
+  <rect
+     x="422.35001"
+     y="333.95001"
+     width="293.14001"
+     height="130.64999"
+     fill="#b4d4dd"
+     id="rect38" />
+  <text
+     x="439.86935"
+     y="318.95392"
+     fill="#333333"
+     font-family="sans-serif"
+     font-size="16px"
+     id="text46"><tspan
+       x="439"
+       y="358.58875"
+       id="tspan40">&lt;body&gt;</tspan><tspan
+       x="449"
+       y="405.00464"
+       id="tspan42">&lt;p style=&quot;color: red&quot;&gt;</tspan><tspan
+       x="439"
+       y="451.42056"
+       id="tspan44">&lt;/body&gt;</tspan></text>
+  <path
+     d="m 500,237.59 c 0,0 55.476,0.82676 72.039,16.575 19.444,18.488 16.575,49.088 16.575,49.088 h 7.0126 l -17.85,14.663 -17.85,-14.981 h 8.2876 c 0,0 1.1089,-12.782 -1.275,-23.907 -1.9125,-8.9251 -6.6938,-28.369 -30.919,-32.832 -24.03,-4.4266 -36.019,-3.1876 -36.019,-3.1876 z"
+     fill="#ddbcb4"
+     id="path48" />
+  <path
+     d="m 171.21,30.229 c 0,0 55.476,0.82676 72.039,16.575 19.444,18.488 16.575,49.088 16.575,49.088 h 7.0126 l -17.85,14.663 -17.85,-14.981 h 8.2876 c 0,0 1.1089,-12.782 -1.275,-23.907 -1.9125,-8.9251 -6.6938,-28.369 -30.919,-32.832 -24.03,-4.4266 -36.019,-3.1876 -36.019,-3.1876 z"
+     fill="#ddbcb4"
+     id="path50" />
+</svg>

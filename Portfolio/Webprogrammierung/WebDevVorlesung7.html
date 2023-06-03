@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vorlesung 7 &ndash; Portfolio &ndash; Niclas Kusenbach</title>
+		<link rel="stylesheet" href="../index.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+		/>
+		<link
+			rel="shortcut icon"
+			href="../pictures/logo_small_icon_only_inverted.png"
+			type="image/x-icon"
+		/>
+		<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+	</head>
+	<body>
+		<header class="navbar">
+			<div>
+				<ul>
+					<div class="dropdown">
+						<a href="../../index.html#webprogrammierung" class="item active"
+							>Webprogrammierung</a
+						>
+						<div>
+							<ul class="dropcontent">
+								<li><a href="WebDevVorlesung1.html">Vorlesung 1</a></li>
+								<li><a href="WebDevVorlesung2.html">Vorlesung 2</a></li>
+								<li><a href="WebDevVorlesung3.html">Vorlesung 3</a></li>
+								<li><a href="WebDevVorlesung4.html">Vorlesung 4</a></li>
+								<li><a href="WebDevVorlesung5.html">Vorlesung 5</a></li>
+								<li><a href="WebDevVorlesung6.html">Vorlesung 6</a></li>
+								<li><a href="WebDevVorlesung7.html">Vorlesung 7</a></li>
+								<li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+							</ul>
+						</div>
+					</div>
+					<a class="name" href="../../index.html">Niclas Kusenbach</a>
+					<a href="../../index.html#verteilteSysteme" class="item"
+						>Verteilte Systeme</a
+					>
+				</ul>
+			</div>
+		</header>
+		<main class="global section-gap">
+			<div class="section-gap">
+				<div class="heading section-gap">
+					<h1>Vorlesung 7 &ndash; Sitzung vom 5.12.2022 und 8.12.2022</h1>
+				</div>
+				<p>
+					Mit JavaScript können Entwickler dynamische Funktionen zu einer
+					Webseite hinzufügen, indem sie Code schreiben, der im Webbrowser des
+					Benutzers ausgeführt wird und den Inhalt und das Layout der Seite
+					manipuliert. Beispielsweise kann ein Entwickler JavaScript verwenden,
+					um ein Formular zu validieren, bevor es abgeschickt wird, um ein
+					Bildkarussell zu animieren oder um ein Spiel zu erstellen, das im
+					Browser läuft. <br />
+					Dynamische Webseiten bieten eine ansprechende und interaktive
+					Benutzererfahrung, da sie es den Benutzern ermöglichen, mit der Seite
+					durch das DOM auf eine Weise zu interagieren, die bei statischen
+					Seiten nicht möglich ist.
+				</p>
+				<h2>Verschiedene JavaScript Befehle</h2>
+				<h3>Verschachtelung von <code>.getElementById()</code></h3>
+				<p>
+					Die Funktion <code>.getElementById()</code> ist eine Methode des
+					Dokumentobjekts in JavaScript, mit der Sie ein Element auf einer
+					Webseite anhand seines eindeutigen <code>id</code>-Attributs auswählen
+					können. Um <code>.getElementById()</code> zu verschachteln, können Sie
+					damit ein Element auf der Seite auswählen und es dann erneut
+					verwenden, um ein untergeordnetes Element des gerade ausgewählten
+					Elements auszuwählen. Hier ist ein Beispiel, wie Sie
+					<code>.getElementById()</code> verschachteln können, um ein
+					untergeordnetes Element auszuwählen:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;div id="parent"&gt;
+      &lt;div id="child"&gt;Child Element&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;script&gt;
+      // Select the parent element
+      var parent = document.getElementById("parent");
+      // Select the child element within the parent element
+      var child = parent.getElementById("child");
+   &lt;/script&gt;             
+            </pre
+				>
+				<p>
+					In diesem Beispiel wird die Funktion
+					<code>.getElementById()</code> verwendet, um das übergeordnete Element
+					auszuwählen, und dann erneut verwendet, um das untergeordnete Element
+					innerhalb des übergeordneten Elements auszuwählen. Auf diese Weise
+					können Sie bestimmte Elemente innerhalb des DOM (Document Object
+					Model) anhand ihrer <code>id</code>-Attribute auswählen. Sie können
+					<code>.getElementById()</code> auch mehrfach verschachteln, um tiefere
+					Elemente innerhalb des DOM auszuwählen.
+				</p>
+				<h3>nextSibling/previousSibling</h3>
+				<p>
+					Die Eigenschaften <code>nextSibling</code> und
+					<code>previousSibling</code> sind Knotenobjekte, die den Zugriff auf
+					den nächsten bzw. vorherigen Geschwisterknoten eines bestimmten
+					Knotens ermöglichen. Ein Geschwisterknoten ist ein Knoten, der sich
+					auf der gleichen Ebene wie ein anderer Knoten im DOM-Baum befindet.
+					Zum Beispiel im folgenden HTML:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;div id="parent"&gt;
+      &lt;div id="child1"&gt;&lt;/div&gt;
+      &lt;div id="child2"&gt;&lt;/div&gt;
+      &lt;div id="child3"&gt;&lt;/div&gt;
+   &lt;/div&gt;
+                  </pre
+				>
+				<p>
+					Die Elemente <code>child1</code>, <code>child2</code> und
+					<code>child3</code> sind Geschwister, da sie alle Kinder desselben
+					übergeordneten Elements (<code>parent</code>) sind. Um mit den
+					Eigenschaften <code>nextSibling</code> und
+					<code>previousSibling</code> auf die nächsten oder vorherigen
+					Geschwister eines Knotens zuzugreifen, können man die folgende Syntax
+					verwenden:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   // Select the second child element
+   var child2 = document.getElementById("child2");
+   // Access the next sibling element (child3)
+   var nextSibling = child2.nextSibling;
+   // Access the previous sibling element (child1)
+   var previousSibling = child2.previousSibling;
+            </pre
+				>
+				<p>
+					In diesem Beispiel wird die <code>nextSibling</code>-Eigenschaft
+					verwendet, um auf das Element <code>child3</code> zuzugreifen, und die
+					<code>previousSibling</code>-Eigenschaft wird verwendet, um auf das
+					Element <code>child1</code> zuzugreifen. Man sollte beachten, dass die
+					Eigenschaften <code>nextSibling</code> und
+					<code>previousSibling</code> <code>null</code> zurückgibt, wenn es
+					keinen nächsten bzw. vorherigen Geschwisterknoten gibt. Außerdem ist
+					auch wichtig zu beachten, dass die Eigenschaften
+					<code>nextSibling</code> und <code>previousSibling</code> den nächsten
+					bzw. vorherigen Geschwisterknoten als rohes DOM-Knotenobjekt
+					zurückgeben und nicht als umhülltes Elementobjekt, wie Sie es mit
+					<code>getElementById</code> oder <code>querySelector</code> erhalten
+					würden. Um auf die Eigenschaften des Geschwisterknotens zuzugreifen,
+					müssen Sie DOM-Knoten-Methoden und -Eigenschaften verwenden, wie
+					<code>nodeName</code>, <code>nodeValue</code> und
+					<code>innerHTML</code>.
+				</p>
+				<h3>Document.wirte()</h3>
+				<p>
+					Die Methode <code>document.write()</code> ist eine Methode des
+					document-Objekts in JavaScript, mit der man Inhalte in eine Webseite
+					schreiben können. Sie kann verwendet werden, um neue Inhalte in die
+					Seite einzufügen oder bestehende Inhalte zu überschreiben. Hier ein
+					Beispiel, wie Sie die Methode <code>document.write()</code> verwenden
+					können:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   &lt;script&gt;
+      document.write("Hello, World!");
+   &lt;/script&gt;
+            </pre
+				>
+				<p>
+					Dieser Code fügt die Zeichenfolge "Hello, World!" an der Stelle in die
+					Seite ein, an der das Skript ausgeführt wird. Die Methode
+					<code>document.write()</code> wird häufig in Verbindung mit Schleifen
+					oder bedingten Anweisungen verwendet, um dynamische Inhalte für eine
+					Webseite zu erzeugen. Es ist wichtig zu beachten, dass die Methode
+					<code>document.write()</code> nicht verwendet werden sollte, um
+					Inhalte in eine Seite einzufügen, nachdem diese fertig geladen ist, da
+					dadurch die gesamte Seite überschrieben wird.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>jQuery</h2>
+				<p>
+					jQuery ist eine schnelle, kleine und funktionsreiche
+					JavaScript-Bibliothek, die das Manipulieren von HTML-Dokumenten, die
+					Behandlung von Ereignissen und Animationen mit einer
+					benutzerfreundlichen API, die in einer Vielzahl von Browsern
+					funktioniert, erheblich vereinfacht. Mit einer Kombination aus
+					Vielseitigkeit und Erweiterbarkeit hat jQuery die Art und Weise, wie
+					Millionen von Menschen JavaScript schreiben, verändert. Hier sind
+					einige der wichtigsten Funktionen von jQuery:
+				</p>
+				<ul></ul>
+				<li>
+					<strong>HTML/DOM-Manipulation:</strong> jQuery macht es einfach,
+					HTML-Elemente auf einer Seite auszuwählen und zu manipulieren. Man
+					kann zum Beispiel die Methode <code>.css()</code> verwenden, um den
+					Stil eines Elements zu ändern, die Methode <code>.html()</code>, um
+					seinen Inhalt zu ändern, und die Methode <code>.attr()</code>, um
+					seine Attribute zu ändern.
+				</li>
+				<li>
+					<strong>Ereignisbehandlung:</strong> jQuery bietet eine einfache und
+					bequeme Möglichkeit, Ereignisbehandler an Elemente zu binden. Man kann
+					zum Beispiel die Methode <code>.click()</code> verwenden, um eine
+					Funktion anzugeben, die ausgeführt wird, wenn ein Element angeklickt
+					wird, oder die Methode <code>.hover()</code>, um Funktionen für
+					Mauseintritts- und Mausaustrittsereignisse anzugeben.
+				</li>
+				<li>
+					<strong>Animation:</strong> jQuery verfügt über eine Vielzahl von
+					Methoden zur Erstellung von Animationen, wie
+					<code>.fadeIn()</code> und <code>.slideUp()</code>. Mit diesen
+					Methoden kann man fließende Übergänge zwischen verschiedenen Zuständen
+					erstellen und seiner Seite so auf einfache Weise interaktive Effekte
+					hinzufügen.
+				</li>
+				<li>
+					<strong>Ajax:</strong> jQuery macht es einfach, HTTP-Anfragen zu
+					senden und die Antworten mit der Methode <code>$.ajax()</code> oder
+					ihren Kurzformen wie <code>$.get()</code> und <code>$.post()</code> zu
+					verarbeiten. So kann man Daten von einem Server abrufen und eine Seite
+					aktualisieren, ohne die Seite aktualisieren zu müssen.
+				</li>
+				<p>
+					Normalerweise lädt man jQuery auf den eigenen Webserver, man kann aber
+					auch einen Link setzen und dann jQuery nutzen. Außerdem hat das
+					Framework die größte aktive Entwicklergemeinde. <br />Die Verwendung
+					von jQuery hat mehrere Vorteile:
+				</p>
+				<ol>
+					<li>
+						<strong>Einfachheit:</strong> jQuery vereinfacht die
+						JavaScript-Programmierung erheblich. Man kann komplexe Effekte mit
+						wenigen Zeilen Code erreichen, im Gegensatz zum Schreiben von langem
+						und komplexem JavaScript-Code.
+					</li>
+					<li>
+						<strong>Browserübergreifende Kompatibilität:</strong> jQuery
+						funktioniert in vielen modernen Browsern, darunter Internet
+						Explorer, Firefox, Chrome, Safari und anderen. Das bedeutet, dass
+						man sich keine Gedanken über das Testen Ihres Codes in verschiedenen
+						Browsern oder das Schreiben von browserspezifischem Code machen
+						muss.
+					</li>
+					<li>
+						<strong>Leistung:</strong> jQuery wurde entwickelt, um schnell und
+						effizient zu sein, und wurde für hohe Leistung optimiert. Es bietet
+						auch Methoden, die helfen, die Anzahl der DOM-Manipulationen zu
+						minimieren und das Risiko von Speicherlecks zu verringern.
+					</li>
+					<li>
+						<strong>Große Gemeinschaft:</strong> jQuery hat eine große und
+						aktive Gemeinschaft von Nutzern und Entwicklern, was bedeutet, dass
+						man eine Fülle von Ressourcen und Unterstützung finden kann, um
+						Probleme zu lösen oder mehr über die Bibliothek zu erfahren.
+					</li>
+					<li>
+						<strong>Erweiterbarkeit:</strong> jQuery ist erweiterbar, d. h. man
+						kann seine eigenen Plugins erstellen oder von anderen erstellte
+						Plugins verwenden, um die Funktionalität zu erweitern. Das macht es
+						einfach, neue Funktionen zu Ihren Projekten hinzuzufügen, ohne das
+						Rad neu erfinden zu müssen.
+					</li>
+				</ol>
+				<p>
+					Hier einmal der Unterschied zwischen JavaScript und jQuery:
+					<strong>JavaScript:</strong>
+				</p>
+
+				<pre class="prettyprint lang-scm">
+               
+   // Get the element
+   var element = document.getElementById("myElement");
+   // Toggle its visibility
+   if (element.style.display === "none") {
+   element.style.display = "block";
+   } else {
+   element.style.display = "none";
+   }
+            </pre
+				>
+				<p>
+					<strong>jQuery:</strong>
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   // Toggle the visibility of the element with ID "myElement"
+   $("#myElement").toggle();
+            </pre
+				>
+				<p>
+					Wie man sehen kann, ist die jQuery-Version viel kürzer und leichter zu
+					lesen, und sie abstrahiert viele der Details der DOM-Bearbeitung.
+					jQuery bietet mehrere Methoden zum Hinzufügen, Entfernen und
+					Manipulieren von Elementen im DOM (Document Object Model). Hier ist
+					ein kurzer Überblick über einige der wichtigsten Methoden:
+				</p>
+				<ul>
+					<li>
+						<code>.append()</code>: Fügt Inhalt am Ende eines Elements hinzu.
+					</li>
+					<li>
+						<code>.prepend()</code>: Fügt den Inhalt am Anfang eines Elements
+						ein.
+					</li>
+					<li><code>.remove()</code>: Entfernt ein Element aus dem DOM.</li>
+					<li>
+						<code>.empty()</code>: Entfernt den gesamten Inhalt aus einem
+						Element.
+					</li>
+					<li>
+						<code>.before()</code>: Fügt den Inhalt vor einem Element ein.
+					</li>
+					<li>
+						<code>.after()</code>: Fügt den Inhalt nach einem Element ein.
+					</li>
+				</ul>
+				<p>Hier ein Beispiel, wie Sie diese Methoden verwenden können:</p>
+				<pre class="prettyprint lang-scm">
+
+   // Add a new list item to the end of the list
+   $("ul").append("&lt;li&gt;Item 4&lt;/li&gt;");
+   // Add a new list item to the beginning of the list
+   $("ul").prepend("&lt;li&gt;Item 0&lt;/li&gt;");
+   // Remove the second list item
+   $("ul li:eq(1)").remove();
+   // Remove all the content from the list
+   $("ul").empty();
+   // Insert content before the first list item
+   $("ul li:first").before("&lt;li&gt;Item -1&lt;/li&gt;");
+   // Insert content after the last list item
+   $("ul li:last").after("&lt;li&gt;Item 5&lt;/li&gt;");
+            </pre
+				>
+				<p>
+					Zuletzt ist es noch sehr wichtig, dass man kein JavaScript und jQuery
+					mischt. Auch wenn es verlockend ist kann dies zu ungeplanten
+					Komplikationen führen.
+				</p>
+			</div>
+			<div class="section-gap">
+				<h2>Übungen</h2>
+				<p>
+					Zum Schluss haben wir noch zwei Übungen gemacht. Die erste war
+					mithilfe von JavaScript ein halbtransparentes Bild über eine Schrift
+					drüber zu legen.
+				</p>
+
+				<p>
+					Das Ergebnis ist
+					<a
+						href="../../Vorlesung 7/jQuery5s/jQuery5s/Kapitel05s/5.2.html"
+						target="_blank"
+						>hier</a
+					>
+					zu finden.
+				</p>
+				<p>
+					Außerdem sollten wir noch mithilfe von jQuery ein Akkordeon-Menü
+					erstellen. Das ist
+					<a
+						href="../../Vorlesung 7/jQuery5s/jQuery5s/Kapitel10/10.1.html"
+						target="_blank"
+						>hier</a
+					>
+					zu finden.
+				</p>
+			</div>
+		</main>
+		<footer class="section-gap">
+			<div class="footer">
+				<a href="Vertiefungsthema.html">Zum Vertiefungsthema</a>
+			</div>
+			<div>
+				<p class="cright">
+					&copy; 2022 Niclas Kusenbach &ndash; Alle Rechte Vorbehalten.
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>

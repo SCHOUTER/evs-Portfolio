@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vorlesung 1 &ndash; Portfolio &ndash; Niclas Kusenbach</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+    />
+    <link
+        rel="shortcut icon"
+        href="../pictures/logo_small_icon_only_inverted.png"
+        type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div>
+            <ul>
+                <div class="dropdown">
+                    <a href="../../index.html#webprogrammierung" class="item"
+                        >Webprogrammierung</a
+                    >
+                    <div>
+                        <ul class="dropcontent">
+                            <li><a href="WebDevVorlesung1.html">Vorlesung 1</a></li>
+                            <li><a href="WebDevVorlesung2.html">Vorlesung 2</a></li>
+                            <li><a href="WebDevVorlesung3.html">Vorlesung 3</a></li>
+                            <li><a href="WebDevVorlesung4.html">Vorlesung 4</a></li>
+                            <li><a href="WebDevVorlesung5.html">Vorlesung 5</a></li>
+                            <li><a href="WebDevVorlesung6.html">Vorlesung 6</a></li>
+                            <li><a href="WebDevVorlesung7.html">Vorlesung 7</a></li>
+                            <li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="name" href="../../index.html">Niclas Kusenbach</a>
+                <div class="dropdown">
+                    <a href="../../index.html#verteilteSysteme" class="item active"
+                        >Verteilte Systeme</a
+                    >
+                    <div>
+                        <ul class="dropcontent">
+                            <li><a href="VerteilteSystemeVorlesung1.html">Vorlesung 1</a></li>
+                            <li><a href="VerteilteSystemeVorlesung2.html">Vorlesung 2</a></li>
+                            <li><a href="VerteilteSystemeVorlesung3.html">Vorlesung 3</a></li>
+                            <li><a href="VerteilteSystemeVorlesung4.html">Vorlesung 4</a></li>
+                            <li><a href="VerteilteSystemeVorlesung5.html">Vorlesung 5</a></li>
+                            <li><a href="VerteilteSystemeVorlesung6.html">Vorlesung 6</a></li>
+                            <li><a href="VerteilteSystemeVorlesung7.html">Vorlesung 7</a></li>
+                            <li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <main class="global section-gap">
+        <div class="section-gap">
+            <div class="heading section-gap">
+                <h1>Vorlesung 1 &ndash; Sitzung vom 03.04.2023</h1>
+            </div>
+            <p>
+                In der ersten Vorlesung zum neuen Thema „verteilte Systeme“ haben wir einige alte, schon bekannte Themen aus dem Bereich der Netzwerkkommunikation und serverseitige Technologien wiederholt. Anschließend haben wir neue Konzepte zum Thema Streams und Serialisierung am Beispiel von Java Code kennengelernt.
+            </p>
+        </div>
+        <div class="section-gap">
+            <h2>Netzwerkkommunikation und serverseitige Technologien</h2>
+            <p>
+                Terminals, Ethernet, Bridges und Switches ermöglichen die effiziente Übertragung von Daten zwischen vernetzten Geräten und gewährleisten eine zuverlässige und sichere Kommunikation.
+                Durch Terminals können Benutzer mit einem Computer oder Netzwerk interagieren. Sie umfassten in der Regel eine Tastatur, einen Monitor und eine Maus und wurden zur Ein- und Ausgabe von Informationen verwendet. Bei Terminals kann es sich um physische Geräte handeln, oder in moderner Form auch um virtuelle Geräte wie ein Terminalemulator auf einem Computer.
+                Ethernet, auch bekannt als Koaxialkabel wird verwendet, um Geräte miteinander zu verbinden und ermöglicht eine Hochgeschwindigkeits-Datenübertragung. Es arbeitet auf der Datenverbindungsschicht des OSI-Modells und verwendet MAC-Adressen, um Geräte im Netzwerk zu identifizieren. <br>
+                Bridges sind Netzwerkgeräte, die zwei oder mehr Netzwerkgeräte miteinander verbinden. Sie arbeiten auf der Datenverbindungsschicht des OSI-Modells und werden verwendet, um Daten zwischen Segmenten auf der Grundlage ihrer MAC-Adressen zu filtern und weiterzuleiten. Bridges tragen dazu bei, Netzüberlastungen zu verringern und die Gesamtleistung des Netzes zu verbessern.
+                Switches ähneln den Bridges, arbeiten aber auf der Netzwerkschicht des OSI-Modells. Sie verwenden MAC-Adressen zur Weiterleitung von Daten zwischen Netzwerksegmenten, können aber auch IP-Adressen zur Weiterleitung von Daten zwischen Netzwerken verwenden. Switches sind fortschrittlicher als Brücken und bieten Funktionen wie VLANS, QoS und Link-Aggregation. Bei serverseitigen Technologien sind Switches besonders wichtig, da sie das Rückgrat eines Rechenzentrums oder einer Serverfarm bilden. Sie ermöglichen es Servern miteinander und mit der Außenwelt zu kommunizieren, und sorgen dafür, dass Daten schnell und zuverlässig übertragen werden. Switches spielen auch eine Schlüsselrolle bei der Netzwerksicherheit, da sie Funktionen wie Portsicherheit und Zugriffskontrolllisten bieten. <br>
+                Das aus fünf Grundelementen bestehende Kommunikationsmodell ist ein Rahmen, der den Kommunikationsprozess zwischen zwei oder mehr Parteien beschreibt und dazu beiträgt, dass die Nachrichten zwischen den Parteien korrekt und effizient übermittelt werden.
+            </p>
+            <img src="../pictures/Kommunikationsprozess.png" alt="Aus fünf Grundelementen bestehendes Kommunikationsmodell - ist ein Rahmen, der den Kommunikationsprozess zwischen zwei oder mehr Parteien beschreibt">
+            <p>
+                Zusammen liefern diese fünf Tupel eine vollständige Beschreibung des Kommunikationsprozesses, von der Quelle der Nachricht bis zu ihrem Ziel. In der Netzwerkkommunikation und bei serverseitigen Technologien wird das 5-Tupel-Modell in einer Vielzahl von Protokollen und Systemen verwendet (darunter TCP/IP, UDP und SIP). Außerdem wird es auch in Firewall- und Netzwerksicherheitssystemen verwendet, um ein- und ausgehenden Datenverkehr zu filtern und zu kontrollieren. <br>
+                Das OSI-Modell (Open Systems Interconnection) ist ein konzeptioneller Rahmen, der die Funktion eines Netzkommunikationssystems beschreibt. Es ist in sieben Schichten unterteilt, von denen jede für einen bestimmten Aspekt der Netzkommunikation zuständig ist. Die Schichten sind wie folgt:
+            </p>
+            <img src="../pictures/OSI-Model.png" alt="Darstellung des OSI-Modells">
+            <p>
+                Die OSI-Schichten tragen dazu bei, dass die Netzkommunikation effizient und sicher ist. Jede Schicht baut auf der darunter liegenden Schicht auf und sorgt für eine klare Trennung der Belange und vereinfacht den Entwurf und die Implementierung von Netzkommunikationssystemen. <br>
+                Bei der Client-Server-Architektur sendet der Client Anfragen an den Server, und der Server antwortet mit den angeforderten Informationen oder Diensten. Dieses Modell ermöglicht eine effiziente und skalierbare Kommunikation zwischen Geräten und wird häufig in Webanwendungen, Datenbanksystemen und anderen netzbasierten Technologien eingesetzt. Es gibt zwei Haupttypen von Client-Server-Architekturen: Thin Client und Fat Client. In einer Thin-Client-Architektur wird der größte Teil der Verarbeitung auf dem Server durchgeführt, und das Client-Gerät dient als einfache Schnittstelle für den Zugriff auf die Server-Ressourcen. Bei einer Fat-Client-Architektur wird ein größerer Teil der Verarbeitung auf dem Client-Gerät durchgeführt, was eine größere Flexibilität und Interaktivität der Benutzeroberfläche ermöglicht. Die Client-Server-Architektur hat mehrere Vorteile, darunter:
+                <ul>
+                    <li><b>Skalierbarkeit:</b> Das Modell ermöglicht eine effiziente Kommunikation zwischen den Geräten, so dass die Anzahl der Geräte je nach Bedarf leicht erhöht oder verringert werden kann.</li>
+                    <li><b>Sicherheit:</b> Durch die Zentralisierung von Daten und Diensten auf dem Server kann die Client-Server-Architektur die Sicherheit verbessern, da sie eine bessere Kontrolle über Zugriff und Berechtigungen ermöglicht.</li>
+                    <li><b>Leichte Wartung:</b> Da der Großteil der Verarbeitung auf dem Server stattfindet, können Wartung und Upgrades zentral durchgeführt werden, was die Verwaltung und Aktualisierung des Systems erleichtert.</li>
+                </ul>
+            </p>
+        </div>
+        <div class="section-gap">
+            <h2>Streams und Serialisierung</h2>
+            <p>
+                In Java können Objekte mithilfe von Streams und Serialisierung gespeichert und abgerufen werden. Streams werden zur Übertragung von Daten zwischen Programmen verwendet, und die Serialisierung ist der Prozess der Umwandlung eines Objekts in einen Bytestrom, damit es gespeichert oder über ein Netzwerk übertragen werden kann. <br>
+                Um ein Objekt in Java zu speichern, muss es zunächst serialisiert werden. Dies geschieht mithilfe der Klasse ObjectOutputStream, die das Objekt in einen Bytestrom schreibt. Das serialisierte Objekt kann dann in einer Datei oder einer Datenbank gespeichert oder über ein Netzwerk übertragen werden. Um das Objekt abzurufen, muss es mithilfe der Klasse ObjectInputStream deserialisiert werden, die den Bytestrom wieder in ein Objekt umwandelt. <br>
+                Das Löschen von Objekten in Java ist der Vorgang, bei dem sie aus dem Speicher entfernt werden, wenn sie nicht mehr benötigt werden. Java verfügt über einen Garbage Collector, der automatisch Speicher freimacht, indem er Objekte entfernt, die vom Programm nicht mehr benötigt werden. Es ist jedoch auch möglich, Objekte explizit mit dem Schlüsselwort "null" zu löschen, wodurch der Verweis auf das Objekt entfernt wird und der Garbage Collector den Speicher zurückfordern kann. <br>
+                In der Java API gibt es verschiedene Arten von Streams, darunter sogenannte Verkettungsströme (Chaining Streams) und Anschlussströme (Connection Streams). Ein Anschlussstrom in Java stellt eine Verbindung zu einer Quelle oder einem Zielort wie z.B. einer Datei oder einem Netzwerk-Socket her. Die Verwendung von Anschlussströmen erlaubt das Lesen und Schreiben von Daten zu und von diesen Quellen oder Zielorten. Verkettungsströme in Java funktionieren nur, wenn sie mit anderen Strömen verbunden sind. Sie werden oft auch als "Dekoratoren" bezeichnet, da sie andere Ströme "dekoriert" oder erweitert. Verkettungsströme erlauben das Manipulieren von Daten, während sie durch andere Ströme fließen. Beispiele für Verkettungsströme in Java sind außer den eben erwähnten der BufferedInputStream und der BufferedOutputStream, die jeweils die Performance von Input- bzw. Output-Strömen durch die Verwendung von Pufferung verbessern.
+            </p>
+        </div>
+    </main>
+    <footer class="section-gap">
+        <div class="footer">
+            <a href="VerteilteSystemeVorlesung2.html">Nächste Vorlesung</a>
+        </div>
+        <div>
+            <p class="cright">
+                &copy; 2022 Niclas Kusenbach &ndash; Alle Rechte Vorbehalten.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vorlesung 1 &ndash; Portfolio &ndash; Niclas Kusenbach</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto"
+    />
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+    />
+    <link
+        rel="shortcut icon"
+        href="../pictures/logo_small_icon_only_inverted.png"
+        type="image/x-icon"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div>
+            <ul>
+                <div class="dropdown">
+                    <a href="../../index.html#webprogrammierung" class="item"
+                        >Webprogrammierung</a
+                    >
+                    <div>
+                        <ul class="dropcontent">
+                            <li><a href="WebDevVorlesung1.html">Vorlesung 1</a></li>
+                            <li><a href="WebDevVorlesung2.html">Vorlesung 2</a></li>
+                            <li><a href="WebDevVorlesung3.html">Vorlesung 3</a></li>
+                            <li><a href="WebDevVorlesung4.html">Vorlesung 4</a></li>
+                            <li><a href="WebDevVorlesung5.html">Vorlesung 5</a></li>
+                            <li><a href="WebDevVorlesung6.html">Vorlesung 6</a></li>
+                            <li><a href="WebDevVorlesung7.html">Vorlesung 7</a></li>
+                            <li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <a class="name" href="../../index.html">Niclas Kusenbach</a>
+                <div class="dropdown">
+                    <a href="../../index.html#verteilteSysteme" class="item active"
+                        >Verteilte Systeme</a
+                    >
+                    <div>
+                        <ul class="dropcontent">
+                            <li><a href="VerteilteSystemeVorlesung1.html">Vorlesung 1</a></li>
+                            <li><a href="VerteilteSystemeVorlesung2.html">Vorlesung 2</a></li>
+                            <li><a href="VerteilteSystemeVorlesung3.html">Vorlesung 3</a></li>
+                            <li><a href="VerteilteSystemeVorlesung4.html">Vorlesung 4</a></li>
+                            <li><a href="VerteilteSystemeVorlesung5.html">Vorlesung 5</a></li>
+                            <li><a href="VerteilteSystemeVorlesung6.html">Vorlesung 6</a></li>
+                            <li><a href="VerteilteSystemeVorlesung7.html">Vorlesung 7</a></li>
+                            <li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="gobal section-gap">
+            <div class="section-gap">
+                <div class="heading section-gap">
+                    <h1>Vorlesung 2 &ndash; Sitzung vom 17.04.2023</h1>
+                </div>
+                <p>
+                    In der zweiten Vorlesung haben wir das Konzept der Serialisierung besprochen, welches uns ermöglicht, Daten aus Java so zu speichern, dass sie auch von anderen Programmen gelesen werden können. Mit anderen Worten, wir haben gelernt, wie man einen String in eine Textdatei schreibt. <br>
+                    Dazu wird ein so genannter Filewriter genutzt:
+                </p>
+                <pre class="prettyprint lang-scm">
+
+    //Filewriter wird erstellt und Textdatei kreiert oder darauf zugegriffen
+    FileWriter writer = new FileWriter("test.txt");
+
+    //Mit der Funktion write() kann ein String in die Datei geschrieben werden
+    writer.write("Der Text der gespeichert werden soll")
+                </pre>
+                <p>
+                    Um auf Dateien zuzugreifen, verwenden wir in Java die File-Klasse. Durch Erstellung eines File-Objekts können wir beispielsweise auf eine Datei oder einen Pfad zugreifen oder auch ein neues Verzeichnis erstellen.
+                    <br>
+                    Um das Schreiben in eine Datei effizienter zu gestalten, wird die Verwendung eines Buffered Writers empfohlen. Dieser arbeitet effizient, indem er zusammen mit einem FileWriter verwendet wird. Der Buffered Writer sammelt die zu schreibenden Daten, bis der Buffer voll ist, und schreibt sie dann als Block in die Datei.
+                </p>
+                <pre class="prettyprint lang-scm">
+
+    BufferedWriter writer = new BufferedWriter(new FileWriter("test.txt"));
+                </pre>
+                <p>
+                    Das Lesen von Dateien in Java kann auf ähnliche Weise wie das Schreiben erfolgen, indem man FileReader und BufferedReader verwendet. Der Text wird zeilenweise durch eine while-Schleife eingelesen:
+                </p>
+                <pre class="prettyprint lang-scm">
+
+    while((zeile = reader.readLine()) != null) {
+        writer.write(zeile);
+    }
+                </pre>
+                <p>
+                    In einer Übung haben wir eine Textdatei mit Java "kopiert". Zunächst haben wir mithilfe von BufferedReader und FileReader den Text aus einer .txt-Datei eingelesen. Anschließend haben wir mithilfe von BufferedWriter und FileWriter eine neue Datei erstellt und den eingelesenen Text in diese geschrieben. Durch die Verwendung des Buffers wurden Zeilenumbrüche und andere Formatierungen im Text erkannt, so dass der Text genau wie im Original in der neuen Datei erschien.
+                </p>
+            </div>
+            <div class="section-gap">
+                <h2>Netzwerkprogrammierung mit Sockets</h2>
+                <p>
+                    Wir haben uns mit der Kommunikation zwischen Java und einer Textdatei beschäftigt und nun geht es einen Schritt weiter. Statt zwischen Java-Programm und Datei können Daten auch zwischen Client und Server über ein Netzwerk ausgetauscht werden. <br>
+                    Es ist wichtig zu beachten, dass der Client stets den Server kennen muss und umgekehrt muss der Server alle verbundenen Clients kennen.
+                </p>
+                <img src="../pictures/server-client-connection.jpg" alt="Darstellung der Verbindung zwischen Server und Client">
+                <p>
+                    Um nun eine Verbindung herzustellen und Nachrichten auszutauschen müssen drei Schritte passieren:
+                </p>
+                <ol>
+                    <li>Verbindung zwischen Server und Client herstellen</li>
+                    <li>Nachrichten an Server senden</li>
+                    <li>Nachrichten vom Server empfangen</li>
+                </ol>
+                <p>
+                    Für eine Verbindung zwischen zwei Maschinen werden sogenannte Sockets verwendet. Dieses Objekt repräsentiert eine Netzwerkverbindung zwischen zwei Geräten. In Java wird dazu die IP-Adresse und die TCP-Portnummer benötigt:
+                </p>
+                <pre class="prettyprint lang-scm">
+
+    //Erstellung eines Sockets mit der IP-Adresse und Portnummer
+    Socket sock = newSocket("192.168.3.113", 4000);
+                </pre>
+                <p>
+                    Bestimmte Dienste wie HTTP oder FTP haben bereits reservierte TCP-Portnummern, daher sollten diese bei der Portwahl vermieden werden. Für Ports im Bereich zwischen 1024 und 65535, die in der Regel frei wählbar sind, ist es dennoch empfehlenswert, die Verfügbarkeit mit dem Systemadministrator abzustimmen, um Konflikte mit anderen Anwendungen zu vermeiden. <br>
+                    Um auf den Datenstrom des Sockets zuzugreifen, kann ein InputStreamReader verwendet werden, der mit dem Socket verbunden wird. Anschließend kann dieser Reader mit einem BufferedReader verknüpft werden, um den Datenstrom effizienter zu verarbeiten.
+                </p>
+                <pre class="prettyprint lang-scm">
+
+    InputStreamReader streamReader = new InputStreamReader(s.getInputStream());
+    BufferedReader reader = new BufferedReader(streamReader);
+                </pre>
+                <p>
+                    Als Gegenstück zum InputStreamReader gibt es den PrintWriter, der in der Lage ist, Daten in einen Socket zu schreiben. Der PrintWriter ist ebenfalls mit dem Socket verbunden und kann über diesen Nachrichten versenden.
+                </p>
+                <pre class="prettyprint lang-scm">
+
+    PrintWriter writer = new PrintWriter(sock.getOutputStream());
+    writer.println("Test Text");
+                </pre>
+                <p>
+                    Ich war erstaunt darüber, wie einfach es ist, eine Netzwerkkommunikation aufzubauen. Im Anschluss daran haben wir eine vertiefende Übung durchgeführt, bei der wir einen Server und einen Client programmiert haben, um Tipps des Tages auszutauschen.
+                </p>
+                <img src="../pictures/Aufgabe_2clientserver.bmp" alt="">
+                <p>Die Tipps sind dabei als String auf dem Server gespeichert und werden vom Client empfangen und in der Konsole ausgegeben.</p>
+            </div>
+        </div>
+    </main>
+    <footer class="section-gap">
+        <div class="footer">
+            <a href="VerteilteSystemeVorlesung3.html">Nächste Vorlesung</a>
+        </div>
+        <div>
+            <p class="cright">
+                &copy; 2022 Niclas Kusenbach &ndash; Alle Rechte Vorbehalten.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

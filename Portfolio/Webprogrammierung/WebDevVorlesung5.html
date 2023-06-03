@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vorlesung 5 &ndash; Portfolio &ndash; Niclas Kusenbach</title>
+		<link rel="stylesheet" href="../index.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+		/>
+		<link
+			rel="shortcut icon"
+			href="../pictures/logo_small_icon_only_inverted.png"
+			type="image/x-icon"
+		/>
+		<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=desert"></script>
+	</head>
+	<body>
+		<header class="navbar">
+			<div>
+				<ul>
+					<div class="dropdown">
+						<a href="../../index.html#webprogrammierung" class="item active"
+							>Webprogrammierung</a
+						>
+						<div>
+							<ul class="dropcontent">
+								<li><a href="WebDevVorlesung1.html">Vorlesung 1</a></li>
+								<li><a href="WebDevVorlesung2.html">Vorlesung 2</a></li>
+								<li><a href="WebDevVorlesung3.html">Vorlesung 3</a></li>
+								<li><a href="WebDevVorlesung4.html">Vorlesung 4</a></li>
+								<li><a href="WebDevVorlesung5.html">Vorlesung 5</a></li>
+								<li><a href="WebDevVorlesung6.html">Vorlesung 6</a></li>
+								<li><a href="WebDevVorlesung7.html">Vorlesung 7</a></li>
+								<li><a href="Vertiefungsthema.html">Vertiefungsthema</a></li>
+							</ul>
+						</div>
+					</div>
+					<a class="name" href="../../index.html">Niclas Kusenbach</a>
+					<a href="../../index.html#verteilteSysteme" class="item"
+						>Verteilte Systeme</a
+					>
+				</ul>
+			</div>
+		</header>
+		<main class="global section-gap">
+			<div class="section-gap">
+				<div class="heading section-gap">
+					<h1>Vorlesung 5 &ndash; Sitzung vom 21.11.2022</h1>
+				</div>
+				<p>
+					In der fünften Vorlesung haben wir uns ausschließlich mit JavaScript
+					befasst. Dabei haben wir die Themen Strings und Eingaben über
+					Formulare bearbeitet.
+				</p>
+				<h2>Strings</h2>
+				<p>
+					Strings sind dafür da, um mit Zeichenketten zu arbeiten. Der
+					Unterschied zu den Datentyp char, welcher von Java bekannt ist,
+					besteht somit darin, dass eine ganze Zeichenkette in einer Variablen
+					gespeichert werden kann. Um dies zu tun, muss ein solcher String
+					jedoch erstmal erzeugt werden. Dies ist auf mehrere Weisen möglich:
+				</p>
+				<pre class="prettyprint lang-scm">
+   
+   let text = new String("Dies ist ein String");
+   
+   let text = new String ();
+   text = "Dies ist ein String";
+   
+   let text = "Dies ist ein String";
+            </pre
+				>
+				<p>
+					Sobald ein String definiert wurde, bringt dieser weiteren
+					Funktionalitäten und Methoden mit, um die Arbeit und Handhabung mit
+					Strings zu vereinfachen. Ein Beispiel dafür wäre die
+					<code>charAt()</code>-Methode. Mit dieser Methode lässt sich
+					herausfinden an welcher Stelle des Strings, welcher Buchstabe steht.
+					Mit <code>charAt(13)</code> lässt sich somit herausfinden, welcher
+					Buchstabe an der 14. Stelle der Zeichenkette steht. 14 darum, da der
+					String bei 0 anfängt und nicht bei 1. Implementiert wird dies mit
+					Hilfe des Punkt-Operators. Somit kann man einfach hinter die Variable,
+					in welcher die Zeichenkette gespeichert ist, ein Punkt setzen und mit
+					<code>charAt()</code> auf eine beliebige Stelle zugreifen oder den
+					Buchstaben an dieser Stelle zurückgeben.<br /><br />
+					Dies ist jedoch nicht die einzige Methode, die ein String mitliefert.
+					In der folgenden Tabelle werden die verschiedenen Methoden und ihre
+					Funktion erläutert.
+				</p>
+				<table class="styled-table">
+					<thead>
+						<tr>
+							<td width="200">Methode</td>
+							<td>Funktion</td>
+						</tr>
+					</thead>
+					<tr>
+						<td>indexOf()</td>
+						<td>
+							Sucht innerhalb des Strings nach einem bestimmten Wort oder
+							Wortteil von vorne und gibt die Position des erstens Zeichen der
+							Folge wieder.
+						</td>
+					</tr>
+					<tr>
+						<td>lastIndexOf()</td>
+						<td>
+							Genauso wie indexOf(), jedoch mit dem Unterschied, dass die Suche
+							von hinten begonnen wird.
+						</td>
+					</tr>
+					<tr>
+						<td>substring()</td>
+						<td>
+							Es lässt sich ein Teil eines Strings lesen. Mit den übergebenen
+							Zahlen lässt sich der Bereich des Strings definieren.
+						</td>
+					</tr>
+					<tr>
+						<td>split()</td>
+						<td>
+							Teilt einen String in mehrere Teilstrings. Als übergebende Wert
+							ist jener, wo der String geteilt wird.
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div class="section-gap">
+				<h2>Formular Objekte</h2>
+				<p>
+					Wie man ein sogenanntes Formular Objekt erzeugt und initialisiert
+					schauen wir uns nun im Folgenden an. Um die zwei Buttons und ein
+					Eingabefeld zu realisieren, benötigen wir das
+					<code>&lt;form&gt;</code>-Tag. Innerhalb des
+					<code>&lt;form&gt;</code>-Tags wird ebenfalls die <code>id</code> und
+					ein <code>name</code> definiert, über welches man es im Nachhinein
+					referenzieren kann. <br />
+					Um nun die Buttons und das Eingabefeld zu erzeugen, benötigen wir nun
+					die <code>&lt;input&gt;</code>-Tags. Diese werden mit dem Zusatz
+					<code>type="button"</code> oder <code>type="text"</code> erstellt.
+					Auch dabei werden die <code>id</code> und ein
+					<code>name</code> definiert und ebenso ein <code>value</code>, welches
+					einen Wert zuordnet.
+					<br />
+					Der folgende Code...
+				</p>
+				<pre class="prettyprint lang-scm">
+               
+   &lt;form id="mein Formular" name="Mein Formular"&gt;
+      &lt;p&gt;
+         &lt;input type="button" id="button1" name="button1" value="button1"&gt;
+         &lt;input type="button" id="button2" name="button2" value="button2"&gt;
+         &lt;input type="button" id="button3" name="button3" value="button3"&gt;
+      &lt;/p&gt;
+   &lt;/form&gt;
+            </pre
+				>
+				<p>...sieht so auf einer Website aus:</p>
+				<form id="mein Formular" name="Mein Formular" style="width: 100%">
+					<p>
+						<input type="button" id="button1" name="button1" value="button1" />
+						<input type="button" id="button2" name="button2" value="button2" />
+						<input type="button" id="button3" name="button3" value="button3" />
+					</p>
+				</form>
+				<p>
+					Um nun ein Formular zu referenzieren, benötigt man den document-Aufruf
+					und den Punktoperator, welcher wie folgt aussehen würde:
+				</p>
+				<pre class="prettyprint lang-scm">
+
+   let x = document.getElementById("button1");
+               </pre
+				>
+				<p>
+					Somit würde in der Variablen <code>x</code> der Button1 gespeichert
+					werden. Möchte man aus einem Textfeld einen Wert in einer Variablen
+					speichern benötigt man am Ende des Aufrufes ein <code>.value</code>.
+				</p>
+				<p>
+					Es gibt noch weitere Attribute im <code>form</code>-Tag. Im folgenden
+					gebe ich einen Überblick über die verschiedenen Objekte und Ihre
+					Funktion
+				</p>
+				<table class="styled-table">
+					<thead>
+						<tr>
+							<td width="200">Objekt</td>
+							<td>Funktion</td>
+						</tr>
+					</thead>
+					<tr>
+						<td>Password-Objekt</td>
+						<td>
+							Ähnlich wie ein Text-Objekt, jedoch werden eingegebene Zeichen
+							nicht gezeigt.
+						</td>
+					</tr>
+					<tr>
+						<td>Hidden-Objekt</td>
+						<td>
+							Ebenfalls vergleichbar mit dem Text-Objekt, jedoch wird dies nicht
+							angezeigt. Dient zum zwischenspeichern.
+						</td>
+					</tr>
+					<tr>
+						<td>Submit-Objekt</td>
+						<td>
+							Ist ein spezielles Button-Objekt. Wird verwendet um Formulare zu
+							verschicken.
+						</td>
+					</tr>
+					<tr>
+						<td>Reset-Objekt</td>
+						<td>
+							Ist das Gegenstück vom Submit-Objekt und alle Eingaben werden
+							gelöscht.
+						</td>
+					</tr>
+					<tr>
+						<td>Checkbox-Objekt</td>
+						<td>Auswahlfelder, in der man eine Option aktivieren kann.</td>
+					</tr>
+				</table>
+			</div>
+			<div class="section-gap">
+				<h2>Übung</h2>
+				<p>Zur Vertiefung haben wir folgenden Aufgabe bearbeitet:</p>
+				<img
+					src="../pictures/Währungsrechneraufgabe.png"
+					alt="Aufgabe: Baue einen Währungsumrechner"
+				/>
+				<div class="form">
+					<form>
+						<label>Betrag: </label
+						><input type="text" name="betrag" id="betrag" /> €
+						<p>Umrechnen in:</p>
+						<input
+							type="button"
+							id="dollar"
+							onclick="euroToDollar()"
+							value="Dollar"
+						/>
+						<input type="button" id="DM" onclick="euroToDM()" value="DM" />
+					</form>
+					<div id="ausgabe"></div>
+				</div>
+			</div>
+			<script>
+				function euroToDollar() {
+					var betrag = document.getElementById('betrag');
+					betrag = betrag.value;
+					var euroKurs = 1.02;
+					var ergebnis = betrag * euroKurs;
+					console.log(ergebnis);
+					document.getElementById('ausgabe').innerHTML =
+						'<p>' + ergebnis + '</p>';
+				}
+				function euroToDM() {
+					var betrag = document.getElementById('betrag');
+					betrag = betrag.value;
+					var dmKurs = 1.95;
+					var ergebnis = betrag * dmKurs;
+					console.log(ergebnis);
+					document.getElementById('ausgabe').innerHTML =
+						'<p>' + ergebnis + '</p>';
+				}
+			</script>
+		</main>
+		<footer class="section-gap">
+			<div class="footer">
+				<a href="WebDevVorlesung6.html">Nächste Vorlesung</a>
+			</div>
+			<div>
+				<p class="cright">
+					&copy; 2022 Niclas Kusenbach &ndash; Alle Rechte Vorbehalten.
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>
